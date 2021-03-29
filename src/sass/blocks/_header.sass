@@ -1,16 +1,14 @@
 .header
-  &::before
-    content: ''
+  &__bg
     position: absolute
     top: 0
     left: 0
-    width: 100%
-    height: 51.6vw
-    background-image: url(../img/header/header-bg.png)
-    background-repeat: no-repeat
-    background-size: 100% 100%
+    width: 100vw
+    min-height: 743px
+    max-height: 743px
     z-index: -1
     object-fit: cover
+    object-position: 65% 90%
   &__wrapper
     display: flex
     padding: 26px 0
@@ -92,14 +90,19 @@
 .form
   position: relative
   margin-bottom: 24px
+  width: 760px
   &__input
-    width: 760px
+    width: 100%
     height: 56px
     padding-left: 52px
+    padding-right: 90px
     border: none
     border-radius: 8px
     overflow: hidden
     outline: none
+    font-weight: 600
+    font-size: 16px
+    line-height: 22px
   &__img
     position: absolute
     top: 50%
