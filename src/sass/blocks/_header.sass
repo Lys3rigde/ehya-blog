@@ -1,0 +1,123 @@
+.header
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 51.6vw
+    background-image: url(../img/header/header-bg.png)
+    background-repeat: no-repeat
+    background-size: 100% 100%
+    z-index: -1
+    object-fit: cover
+  &__wrapper
+    display: flex
+    padding: 26px 0
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 120px
+.logo
+  padding-top: 7px
+.navbar
+  display: flex
+  justify-content: space-between
+  width: 594px
+  &__list
+    list-style-type: none
+    display: flex
+    justify-content: space-between
+    padding: 13px 0
+    margin: 0
+    width: 381px
+  &__item
+    display: flex
+    align-items: center
+    font-weight: 600
+    font-size: 16px
+    line-height: 22px
+  &__link
+    text-decoration: none
+    color: $primary
+    padding-right: 2px
+  &__button
+    margin-left: 82px
+    background: none
+    border: 2px solid #FFFFFF
+    border-radius: 8px
+    color: inherit
+    padding: 11.5px 22px
+    outline: none
+    cursor: pointer
+    font-weight: bold
+    font-size: 16px
+    line-height: 22px
+.search
+  padding: 0 190px
+  &__wrapper
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    flex-wrap: wrap
+  &__title
+    font-family: Roboto
+    font-style: normal
+    font-weight: bold
+    font-size: 48px
+    line-height: 60px
+    text-align: center
+    margin-top: 0
+    margin-bottom: 40px
+  &__list
+    list-style-type: none
+    display: flex
+    padding: 0
+    margin: 0
+  &__tags
+    margin-right: 13px
+    font-weight: 600
+    font-size: 16px
+    line-height: 22px
+  &__item
+    margin-right: 20px
+  &__button
+    padding: 5px 17.4px
+    background: none
+    border: 1px solid #FFFFFF
+    border-radius: 4px
+    color: inherit
+    font-weight: normal
+    font-size: 14px
+    line-height: 20px
+.form
+  position: relative
+  margin-bottom: 24px
+  &__input
+    width: 760px
+    height: 56px
+    padding-left: 52px
+    border: none
+    border-radius: 8px
+    overflow: hidden
+    outline: none
+  &__img
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    left: 20px
+    height: 18px
+  &__button
+    position: absolute
+    top: 50%
+    right: 8px
+    transform: translateY(-50%)
+    padding: 9px 21px
+    background: $buttons
+    border: none
+    border-radius: 8px
+    font-weight: bold
+    font-size: 16px
+    line-height: 22px
+    color: inherit
+    overflow: hidden
+    outline: none

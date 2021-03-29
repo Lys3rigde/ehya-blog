@@ -4,7 +4,130 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="icon" href="src/img/favicon.ico" />
+    <title>Ehya Blog</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <a href="index.html" class="logo">
+            <img src="src/img/header/header-logo.svg" alt="Logotype: Ehya" />
+          </a>
+          <nav class="navbar">
+            <ul class="navbar__list">
+              <li class="navbar__item">
+                <a href="#" class="navbar__link">Домой</a>
+              </li>
+              <li class="navbar__item">
+                <a href="#" class="navbar__link">Лендинги</a>
+                <img src="src/img/header/angle-down.svg" alt="" />
+              </li>
+              <li class="navbar__item">
+                <a href="#" class="navbar__link">Страницы</a>
+                <img src="src/img/header/angle-down.svg" alt="" />
+              </li>
+              <li class="navbar__item">
+                <a href="#" class="navbar__link">Помощь</a>
+              </li>
+            </ul>
+            <button class="navbar__button">Получить</button>
+          </nav>
+        </div>
+        <!-- /.header__wrapper -->
+        <div class="search">
+          <h1 class="search__title">Отдел новостей</h1>
+          <div class="search__wrapper">
+            <form action="" class="form">
+              <img
+                src="src/img/header/header-search.svg"
+                alt="Icon: search"
+                class="form__img"
+              />
+              <input
+                type="text"
+                class="form__input"
+                placeholder="Поиск постов"
+              />
+              <button class="form__button">Поиск</button>
+            </form>
+            <span class="search__tags">Популярные Тэги :</span>
+            <ul class="search__list">
+              <li class="search__item">
+                <button class="search__button">Design</button>
+              </li>
+              <li class="search__item">
+                <button class="search__button">User Experience</button>
+              </li>
+              <li class="search__item">
+                <button class="search__button">User Interfaces</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- /.search -->
+      </div>
+      <!-- /.container -->
+    </header>
+    <section class="offers">
+      <div class="container">
+        <div class="offers-grid">
+          <img
+            src="src/img/offers/offer-img.png"
+            alt="Image: offers"
+            class="offers__img"
+          />
+          <div class="offers__wrapper">
+            <span class="offers__text">Предложения</span>
+            <h2 class="offers__title">
+              Дешевые Авиабилеты - Отличный Способ Сэкономить
+            </h2>
+            <p class="offers__info">
+              В этом цифровом поколении, где информацию можно легко получить за
+              секунды, визитки ...
+            </p>
+            <div class="author">
+              <div class="author__profile">
+                <div class="author__image">
+                  <img
+                    src="src/img/offers/author.png"
+                    alt="Avatar: Author"
+                    class="author__avatar"
+                  />
+                </div>
+                <!-- /.author__image -->
+                <div class="author__info">
+                  <span class="author__name">Viola Manisa</span>
+                  <div class="verify">
+                    <img
+                      src="src/img/offers/verify.svg"
+                      alt="Icon: Verify"
+                      class="verify__img"
+                    />
+                    <span class="verify__text">Verified writer</span>
+                  </div>
+                  <!-- /.author__verify -->
+                </div>
+              </div>
+              <!-- /.author__profile -->
+              <span class="author__date">02 May</span>
+            </div>
+            <!-- /.author -->
+          </div>
+          <!-- /.offers__wrapper -->
+        </div>
+        <!-- /.offers__grid -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.offers -->
+    <section class="popular">
+      <div class="container"></div>
+    </section>
+  </body>
 </html>
