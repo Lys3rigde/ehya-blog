@@ -1,0 +1,40 @@
+.examples
+  padding-bottom: 96px
+  &__text
+    padding: 5px 0
+    color: $buttons
+    font-size: 16px
+    line-height: 22px
+    width: 141px
+  &__button
+    margin-bottom: 0
+    &--media
+      display: none
+  &-grid
+    position: relative
+    &__button
+      position: absolute
+      top: 42.7%
+      transform: translateY(-50%)
+      z-index: 100
+      width: 54px
+      height: 56px
+      border-radius: 50%
+      background-color: $buttons
+      outline: none
+      border: none
+      &--prev
+        left: 0
+        transform: translateX(-50%)
+      &--next
+        right: 0
+        transform: translateX(50%)
+  &__icon
+    margin-left: 11px
+.offers
+  &-grid
+    padding: 0
+    height: 381px
+  &__img
+    height: 100%
+    object-fit: cover
