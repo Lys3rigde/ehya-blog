@@ -276,19 +276,20 @@
         flex-direction: column
         justify-content: space-between
         align-items: center
-        padding: 50px 70px 100px 70px
+        padding: 50px 70px 50px 70px
         overflow: auto
         width: 100vw
       &__item
-        margin-left: 0
-        margin-bottom: 30px
-        font-size: 24px
-        line-height: 36px
+        display: flex
+        justify-content: center
+        margin: 0
+        width: 45%
+        font-size: 20px
+        line-height: 30px
       &__list
         width: 100%
-      &__select
-        font-size: 24px
-        line-height: 36px
+        justify-content: space-between
+        height: 66%
       &__btn
         margin: 0
         width: 50%
@@ -301,7 +302,6 @@
       font-size: 14px
       line-height: 18px
   .search
-    margin-top: 50px
     &__title
       margin-bottom: 20px
     &__tags
@@ -375,6 +375,20 @@
 @media (max-width: 576px)
   .container
     width: 90%
+  .navbar
+    &-mobile
+      &__item
+        margin: 0
+        width: 45%
+        font-size: 16px
+        line-height: 24px
+        &__list
+          width: 85%
+          justify-content: space-between
+          height: 60%
+      &__logo
+        width: 77px
+        height: 24px
   .header
     &__bg
       height: 482px

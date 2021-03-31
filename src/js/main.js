@@ -44,6 +44,7 @@ $(document).ready(() => {
   };
 
   const modalButton = document.querySelector(".navbar__button"),
+    navButton = document.querySelector('.navbar__button--menu'),
     closeModalButton = document.querySelector(".modal__close"),
     modalOverlay = document.querySelector(".modal__overlay"),
     modalWrapper = document.querySelector(".modal__wrapper");
@@ -78,6 +79,7 @@ $(document).ready(() => {
     }
   });
   modalButton.addEventListener('click', openModal);
+  navButton.addEventListener('click', openModal);
   closeModalButton.addEventListener('click', closeModal);
   document.addEventListener('click', event => {
     const target = event.target;

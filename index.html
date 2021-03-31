@@ -9,7 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="src/css/style.css?v1.04" />
+    <link rel="stylesheet" href="src/css/style.css?v1.06" />
     <link rel="icon" href="src/img/favicon.ico" />
     <title>Ehya Blog</title>
   </head>
@@ -39,27 +39,25 @@
               <li class="navbar__item">
                 <a href="#" class="navbar__link">Домой</a>
               </li>
-              <li class="navbar__item navbar__item--less">
-                <form action="#">
-                  <select class="navbar__select">
-                    <option class="navbar__option">Лендинги</option>
-                    <option class="navbar__option">Лендинги</option>
-                    <option class="navbar__option">Лендинги</option>
-                    <option disabled class="navbar__option">E-commerce</option>
-                  </select>
-                </form>
+              <li class="navbar__item navbar__item--menu">
+                <a href="#" class="navbar__link navbar__link--left">Лендинги</a>
+                <img src="src/img/header/angle-down.svg" alt="" />
+                <ul class="submenu">
+                  <li><a href="">Визитки</a></li>
+                  <li><a href="">Промо сайт</a></li>
+                  <li><a href="">E-commerce</a></li>
+                </ul>
+              </li>
+              <li class="navbar__item navbar__item--second">
+                <a href="#" class="navbar__link">Страницы</a>
+                <img src="src/img/header/angle-down.svg" alt="" />
+                <ul class="submenu-second">
+                  <li><a href="">Lorem</a></li>
+                  <li><a href="">Ipsum</a></li>
+                  <li><a href="">Dolor</a></li>
+                </ul>
               </li>
               <li class="navbar__item">
-                <form action="#">
-                  <select class="navbar__select">
-                    <option class="navbar__option">Страницы</option>
-                    <option class="navbar__option">Страницы</option>
-                    <option class="navbar__option">Страницы</option>
-                    <option disabled class="navbar__option">E-commerce</option>
-                  </select>
-                </form>
-              </li>
-              <li class="navbar__item navbar__item">
                 <a href="#" class="navbar__link">Помощь</a>
               </li>
             </ul>
@@ -83,35 +81,37 @@
             />
           </div>
           <!-- /.navbar__wrapper -->
-          <ul class="navbar__list navbar-mobile__list">
+          <ul class="navbar-mobile__list">
             <li class="navbar__item navbar-mobile__item">
               <a href="#" class="navbar__link">Домой</a>
             </li>
-            <li class="navbar__item navbar__item--less navbar-mobile__item">
-              <form action="#">
-                <select class="navbar__select navbar-mobile__select">
-                  <option class="navbar__option">Лендинги</option>
-                  <option class="navbar__option">Лендинги</option>
-                  <option class="navbar__option">Лендинги</option>
-                  <option disabled class="navbar__option">E-commerce</option>
-                </select>
-              </form>
+            <li class="navbar__item navbar__item--menu navbar-mobile__item">
+              <a href="#" class="navbar__link navbar__link--left">Лендинги</a>
+              <img src="src/img/header/angle-down.svg" alt="" />
+              <ul class="submenu submenu--mobile">
+                <li><a href="">Визитки</a></li>
+                <li><a href="">Промо сайт</a></li>
+                <li><a href="">E-commerce</a></li>
+              </ul>
+            </li>
+            <li class="navbar__item navbar__item--second navbar-mobile__item">
+              <a href="#" class="navbar__link">Страницы</a>
+              <img src="src/img/header/angle-down.svg" alt="" />
+              <ul class="submenu-second submenu-second--mobile">
+                <li><a href="">Lorem</a></li>
+                <li><a href="">Ipsum</a></li>
+                <li><a href="">Dolor</a></li>
+              </ul>
             </li>
             <li class="navbar__item navbar-mobile__item">
-              <form action="#">
-                <select class="navbar__select navbar-mobile__select">
-                  <option class="navbar__option">Страницы</option>
-                  <option class="navbar__option">Страницы</option>
-                  <option class="navbar__option">Страницы</option>
-                  <option disabled class="navbar__option">E-commerce</option>
-                </select>
-              </form>
-            </li>
-            <li class="navbar__item navbar__item navbar-mobile__item">
               <a href="#" class="navbar__link">Помощь</a>
             </li>
           </ul>
-          <button class="navbar__button navbar-mobile__btn">Получить</button>
+          <button
+            class="navbar__button navbar-mobile__btn navbar__button--menu"
+          >
+            Получить
+          </button>
         </nav>
         <div class="search">
           <h1 class="search__title">Отдел новостей</h1>
@@ -996,19 +996,39 @@
               Создайте современный и креативный веб-сайт с crealand
             </p>
             <div class="footer-grid__links">
-              <a href="" class="footer-grid__link">
+              <a
+                href="https://google.com"
+                target="_blank"
+                class="footer-grid__link"
+              >
                 <img src="src/img/footer/google.svg" alt="Icon: Google" />
               </a>
-              <a href="" class="footer-grid__link">
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                class="footer-grid__link"
+              >
                 <img src="src/img/footer/twitter.svg" alt="Icon: Twwitter" />
               </a>
-              <a href="" class="footer-grid__link">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                class="footer-grid__link"
+              >
                 <img src="src/img/footer/instagram.svg" alt="Icon: Instagram" />
               </a>
-              <a href="" class="footer-grid__link">
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                class="footer-grid__link"
+              >
                 <img src="src/img/footer/linkedin.svg" alt="Icon: Linkedin" />
               </a>
-              <a href="" class="footer-grid__link">
+              <a
+                href="https://youtube.com"
+                target="_blank"
+                class="footer-grid__link"
+              >
                 <img src="src/img/footer/youtube.svg" alt="Icon: Youtube" />
               </a>
             </div>
