@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,7 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="src/css/style.css?v1.03" />
+    <link rel="stylesheet" href="src/css/style.css?v1.04" />
     <link rel="icon" href="src/img/favicon.ico" />
     <title>Ehya Blog</title>
   </head>
@@ -594,7 +594,7 @@
       <div class="container">
         <div class="all-articles__info">
           <h2 class="all-articles__title">Все Статьи</h2>
-          <p class="all-articles__text">
+          <p class="all-articles__text" id="articles-text">
             Мы делимся общими тенденциями, стратегическими идеями, мнениями,
             короткими и длинными историями команды, стоящей
           </p>
@@ -855,19 +855,158 @@
         </div>
         <!-- ./all-articles__wrapper -->
         <div class="all-articles-button">
-          <button class="button all-articles-button__button" id="button">
-            Больше постов
-            <img
-              src="src/img/popular/arrow.svg"
-              alt="Icon: arrow"
-              class="all-articles-button__icon"
-            />
-          </button>
+          <button
+            class="button all-articles-button__button"
+            id="button"
+          ></button>
         </div>
         <!-- /.all-articles-button -->
       </div>
       <!-- /.container -->
     </section>
+    <footer class="footer">
+      <img
+        src="src/img/footer/background.png"
+        alt="Background"
+        class="footer__bg"
+      />
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer-form">
+            <h2 class="footer-form__title">
+              Получите наши истории на ваш почтовый ящик еженедельно.
+            </h2>
+            <form action="submit" class="footer-form__form">
+              <input
+                type="email"
+                class="footer-form__input"
+                placeholder="Ваш Email"
+              />
+              <button class="footer-form__button">Начать</button>
+            </form>
+            <p class="footer-form__info">
+              Получите ответ завтра, если отправите его до 9 вечера сегодня.
+              Если мы получили после 9 вечера, мы получим ответ на следующий
+              день.
+            </p>
+          </div>
+          <!-- /.footer__form -->
+          <div class="footer-card">
+            <div class="footer-card__wrapper">
+              <img
+                src="src/img/footer/footer__card.png"
+                alt="Image: Footer"
+                class="footer-card__img"
+              />
+              <div class="footer-card__info">
+                <h3 class="footer-card__title">Лучшие статьи каждую неделю</h3>
+                <p class="footer-card__text">
+                  Наши предложения по страхованию везде одинаковы.
+                </p>
+              </div>
+              <!-- /.footer-card__info -->
+            </div>
+            <!-- /.footer-card -->
+          </div>
+        </div>
+        <!-- /.footer__wrapper -->
+        <div class="footer-grid">
+          <div class="footer-grid__about">
+            <a href="index.html" class="logo footer-grid__logo">
+              <img
+                src="src/img/header/header-logo.svg"
+                alt="Logotype: Ehya"
+                class="footer-grid__icon"
+              />
+            </a>
+            <p class="footer-grid__text">
+              Создайте современный и креативный веб-сайт с crealand
+            </p>
+            <div class="footer-grid__links">
+              <a href="" class="footer-grid__link">
+                <img src="src/img/footer/google.svg" alt="Icon: Google" />
+              </a>
+              <a href="" class="footer-grid__link">
+                <img src="src/img/footer/twitter.svg" alt="Icon: Twwitter" />
+              </a>
+              <a href="" class="footer-grid__link">
+                <img src="src/img/footer/instagram.svg" alt="Icon: Instagram" />
+              </a>
+              <a href="" class="footer-grid__link">
+                <img src="src/img/footer/linkedin.svg" alt="Icon: Linkedin" />
+              </a>
+              <a href="" class="footer-grid__link">
+                <img src="src/img/footer/youtube.svg" alt="Icon: Youtube" />
+              </a>
+            </div>
+            <!-- /.footer-grid__links -->
+          </div>
+          <!-- /.footer-grid__about -->
+          <div class="footer-grid__product">
+            <h4 class="footer-grid__title">Продукт</h4>
+            <ul class="footer-grid__ul">
+              <li class="footer-grid__item">Лендинг</li>
+              <li class="footer-grid__item">Функции</li>
+              <li class="footer-grid__item">Документация</li>
+              <li class="footer-grid__item">Скидки</li>
+              <li class="footer-grid__item">Расценки</li>
+            </ul>
+          </div>
+          <!-- /.footer-grid__product -->
+          <div class="footer-grid__service">
+            <h4 class="footer-grid__title">Сервисы</h4>
+            <ul class="footer-grid__ul">
+              <li class="footer-grid__item">Документация</li>
+              <li class="footer-grid__item">Дизайн</li>
+              <li class="footer-grid__item">Темы</li>
+              <li class="footer-grid__item">Иллюстрации</li>
+              <li class="footer-grid__item">UI Kit</li>
+            </ul>
+          </div>
+          <!-- /.footer-grid__service -->
+          <div class="footer-grid__company">
+            <h4 class="footer-grid__title">Компания</h4>
+            <ul class="footer-grid__ul">
+              <li class="footer-grid__item">О нас</li>
+              <li class="footer-grid__item">Условия</li>
+              <li
+                class="footer-grid__item footer-grid__item--less"
+                id="grid-item"
+              >
+                Политика конфиденциальности
+              </li>
+              <li class="footer-grid__item">Careers</li>
+            </ul>
+          </div>
+          <!-- /.footer-grid__company -->
+          <div class="footer-grid__more">
+            <h4 class="footer-grid__title" id="grid-title">Более</h4>
+            <ul class="footer-grid__ul">
+              <li class="footer-grid__item">Документация</li>
+              <li class="footer-grid__item">Лицензия</li>
+              <li class="footer-grid__item">Изменения</li>
+            </ul>
+          </div>
+          <!-- /.footer-grid__more -->
+        </div>
+        <!-- /.footer-grid -->
+        <div class="footer-copyright">
+          <div class="footer-copyright__logo">
+            <img
+              src="src/img/footer/heart.svg"
+              alt="Icon: Heart"
+              class="footer-copyright__img"
+            />
+          </div>
+          <!-- /.footer-copyright__logo -->
+          <p class="footer-copyright__info">
+            Copyright © 2019. Crafted with love.
+          </p>
+        </div>
+        <!-- /.footer__copyright -->
+      </div>
+      <!-- /.container -->
+    </footer>
     <script src="src/js/jquery-3.6.0.min.js"></script>
     <script src="src/js/swiper-bundle.min.js"></script>
     <script src="src/js/main.js"></script>

@@ -13,16 +13,10 @@ $(document).ready(() => {
       onlyInViewport: true,
     }
   });
-  const button = document.getElementById('button');
-  const screenWidth = window.screen.width;
-    if (screenWidth <= 576) {
-      button.innerHTML = 
-      `Смотреть все <img
-      src="src/img/popular/arrow.svg"
-      alt="Icon: arrow"
-      class="all-articles-button__icon"
-      />`
-    }
+  const button = document.getElementById('button'),
+    gridItem = document.getElementById('grid-item'),
+    gridTitle = document.getElementById('grid-title'),
+    articlesText = document.getElementById('articles-text');
   const checkScreen = () => {
     const screenWidth = window.screen.width;
     if (screenWidth <= 576) {
@@ -31,16 +25,23 @@ $(document).ready(() => {
       src="src/img/popular/arrow.svg"
       alt="Icon: arrow"
       class="all-articles-button__icon"
-      />`
+      />`;
+      gridItem.innerHTML = `Privacy Policy`
+      gridTitle.innerHTML = `Ещё..`
+      articlesText.innerHTML = `Мы делимся общими тенденциями, стратегическими идеями, мнениями, короткими и длинными историями команды, стоящей за компанией.`
     } else {
       button.innerHTML = `
       Больше постов
-              <img
-                src="src/img/popular/arrow.svg"
-                alt="Icon: arrow"
-                class="all-articles-button__icon"
-              />`
+            <img
+              src="src/img/popular/arrow.svg"
+              alt="Icon: arrow"
+              class="all-articles-button__icon"
+            />`;
+      gridItem.innerHTML = `Политика конфиденциальности`
+      gridTitle.innerHTML = `Более`
+      articlesText.innerHTML = `Мы делимся общими тенденциями, стратегическими идеями, мнениями, короткими и длинными историями команды, стоящей`
     }
   };
-  window.addEventListener('resize', checkScreen);
+  window.addEventListener('resize', checkScreen); 
+  checkScreen();
 })

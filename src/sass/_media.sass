@@ -1,3 +1,24 @@
+@media (max-width: 1400px)
+  .footer
+    &__wrapper
+      justify-content: flex-start
+    &-form
+      width: 50%
+      &__form
+        width: 90%
+      &__input
+        width: 60%
+      &__title
+        font-size: 30px
+        margin-bottom: 30px
+    &-card
+      width: 45%
+      &__img
+        object-fit: cover
+      &__wrapper
+        width: 100%
+      &__info
+        padding: 21px 23px 16px 17px
 @media (max-width: 1200px)
   .container
     max-width: 960px
@@ -28,11 +49,25 @@
       padding: 215px 22px 40px 22px
       &__br
         display: none
+  .footer
+    &-grid
+      max-width: 100%
+      margin-left: 0
+    &__bg
+  .examples
+    &-grid
+      &__button
+        width: 42px
+        height: 42px
+        &--prev
+          transform: translateX(-30%)
+        &--next
+          transform: translateX(30%)
 @media (min-width: 992px)
   a
     cursor: pointer
     &:hover
-      color: $buttons
+      opacity: 0.7
   button
     cursor: pointer
     &:hover
@@ -139,6 +174,62 @@
       &__text
         font-size: 16px
         line-height: 22px
+  .footer
+    &__bg
+      min-height: 1450px
+      max-height: 1450px
+    &-card
+      display: none
+    &-form
+      width: 100%
+      &__title
+        font-size: 35px
+      &__form
+        width: 100%
+      &__input
+        width: 68%
+      &__info
+        font-size: 15.9px
+        width: 100%
+    &__wrapper
+      padding-bottom: 150px
+    &-grid
+      grid-template: 2fr/ repeat(4, 1fr)
+      grid-template-areas: "second third fourth fifth" "first first first first"
+      row-gap: 92px
+      &__item
+        font-size: 14px
+      &__icon
+        width: 185px
+        height: 58px
+        margin-bottom: 38px
+      &__text
+        width: 100%
+      &__links
+        width: 100%
+      &__about
+        grid-area: first
+        justify-self: center
+        display: flex
+        flex-direction: column
+        align-items: center
+      &__product
+        justify-self: center
+        grid-area: second
+      &__service
+        justify-self: center
+        grid-area: third
+        padding-left: 0
+      &__company
+        justify-self: center
+        grid-area: fourth
+        padding-left: 0
+      &__more
+        justify-self: center
+        grid-area: fifth
+        padding-right: 0
+    &-copyright
+      padding-right: 0
 @media (max-width: 768px)
   .header
     &__bg
@@ -417,6 +508,7 @@
     &--second
       padding-top: 4px
   .examples
+    padding-bottom: 43px
     &-slider
       margin-bottom: 28px
     &-grid
@@ -454,17 +546,21 @@
         font-size: 12px
         line-height: 16px
   .all-articles
+    padding-bottom: 134px
     &__info
       display: flex
       justify-content: center
       width: 100%
+      margin-left: -3px
     &__title
       font-size: 24px
       line-height: 32px
+      margin-bottom: 11px
     &__text
       font-size: 14px
       line-height: 24px
       text-align: center
+      margin-bottom: 27px
     &__wrapper
       grid-template: repeat(6, 320px) / 1fr
       grid-template-areas: "first" "second" "third" "fourth" "fifth" "sixth"
@@ -474,9 +570,10 @@
       padding: 164px 20px 20px 20px
       &__offer
         top: 23px
-        left: 18px
+        left: 19px
         font-size: 14px
         line-height: 20px
+        padding: 2px 8.5px
       &__title
         font-size: 20px
         line-height: 24px
@@ -501,3 +598,79 @@
         padding: 7px 18px 7px 17px
       &__icon
         margin-left: 8px
+  .footer
+    &__bg
+      min-height: 2000px
+      max-height: 2000px
+    &__wrapper
+      padding-left: 8px
+      padding-bottom: 61px
+    &-form
+      &__title
+        font-size: 24px
+        line-height: 32px
+        width: 70%
+        letter-spacing: 0.2px
+        margin-bottom: 8px
+      &__form
+        display: flex
+        flex-direction: column
+        flex-wrap: wrap
+        width: 100%
+        margin-bottom: 0
+      &__input
+        width: 97%
+        height: 48px
+        margin-bottom: 12px
+      &__button
+        width: 97%
+        padding: 11.9px 49px
+      &__info
+        margin-top: 0
+        font-size: 14px
+        line-height: 27px
+    &-grid
+      grid-template: 3fr / repeat(2, 1fr)
+      grid-template-areas: "second third" "fourth fifth" "first first"
+      padding-left: 8px
+      row-gap: 20px
+      padding-bottom: 74px
+      &__about
+        justify-self: start
+      &__product
+        justify-self: start
+      &__service
+        justify-self: start
+        padding-left: 4px
+      &__company
+        justify-self: start
+      &__more
+        justify-self: start
+        padding-left: 4px
+      &__title
+        font-size: 16px
+        line-height: 22px
+        margin-bottom: 20px
+      &__item
+        margin-bottom: 13px
+      &__icon
+        width: 77px
+        height: 24px
+        margin-top: 13px
+        margin-left: -7px
+        margin-bottom: 0
+      &__text
+        margin-top: 13px
+        font-size: 14px
+        line-height: 28px
+        text-align: center
+        margin-left: -18px
+        margin-bottom: 23px
+      &__links
+        width: 75%
+        justify-content: start
+        padding-left: 11px
+      &__link
+        margin-right: 23px
+    &-copyright
+      display: none
