@@ -16,12 +16,29 @@
     justify-content: space-between
     align-items: center
     margin-bottom: 120px
+  &__button
+    display: none
 .logo
   padding-top: 7px
 .navbar
   display: flex
   justify-content: space-between
   width: 594px
+  &-mobile
+    display: none
+    position: fixed
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    background: #1A3245
+    width: 100%
+    height: 100%
+    z-index: 200
+    padding-top: 55px
+    &__list
+      flex-direction: column
+      align-items: center
   &__list
     list-style-type: none
     display: flex
@@ -35,10 +52,16 @@
     font-weight: 600
     font-size: 16px
     line-height: 22px
+    &--less
+      margin-left: 15px
+  &__angle
+    margin-bottom: 2px
   &__link
     text-decoration: none
     color: $primary
     padding-right: 2px
+    &--left
+      margin-left: 15px
   &__button
     margin-left: 82px
     background: none
@@ -51,6 +74,26 @@
     font-weight: bold
     font-size: 16px
     line-height: 22px
+  &__select
+    position: relative
+    border: none
+    background: none
+    background-image: url(../img/header/angle-down.svg)
+    background-repeat: no-repeat
+    background-position: right 58%
+    outline: none
+    overflow: hidden
+    color: $primary
+    font-weight: 600
+    font-size: 16px
+    line-height: 22px
+    text-align: center
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    border-radius: 8px
+  &__option
+    color: $text
 .search
   padding: 0 190px
   &__wrapper

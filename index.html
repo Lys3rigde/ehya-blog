@@ -29,20 +29,37 @@
               class="header__logo"
             />
           </a>
+          <img
+            src="src/img/header/mob-menu.svg"
+            alt="Icon: Mobile menu"
+            class="header-button"
+          />
           <nav class="navbar">
             <ul class="navbar__list">
               <li class="navbar__item">
                 <a href="#" class="navbar__link">Домой</a>
               </li>
-              <li class="navbar__item">
-                <a href="#" class="navbar__link">Лендинги</a>
-                <img src="src/img/header/angle-down.svg" alt="" />
+              <li class="navbar__item navbar__item--less">
+                <form action="#">
+                  <select class="navbar__select">
+                    <option class="navbar__option">Лендинги</option>
+                    <option class="navbar__option">Лендинги</option>
+                    <option class="navbar__option">Лендинги</option>
+                    <option disabled class="navbar__option">E-commerce</option>
+                  </select>
+                </form>
               </li>
               <li class="navbar__item">
-                <a href="#" class="navbar__link">Страницы</a>
-                <img src="src/img/header/angle-down.svg" alt="" />
+                <form action="#">
+                  <select class="navbar__select">
+                    <option class="navbar__option">Страницы</option>
+                    <option class="navbar__option">Страницы</option>
+                    <option class="navbar__option">Страницы</option>
+                    <option disabled class="navbar__option">E-commerce</option>
+                  </select>
+                </form>
               </li>
-              <li class="navbar__item">
+              <li class="navbar__item navbar__item">
                 <a href="#" class="navbar__link">Помощь</a>
               </li>
             </ul>
@@ -50,6 +67,52 @@
           </nav>
         </div>
         <!-- /.header__wrapper -->
+        <nav class="navbar navbar-mobile" id="navbar">
+          <div class="navbar__wrapper">
+            <a href="index.html" class="logo">
+              <img
+                src="src/img/header/header-logo.svg"
+                alt="Logotype: Ehya"
+                class="navbar__logo"
+              />
+            </a>
+            <img
+              src="src/img/header/mob-menu.svg"
+              alt="Icon: Mobile menu"
+              class="navbar-button"
+            />
+          </div>
+          <!-- /.navbar__wrapper -->
+          <ul class="navbar__list navbar-mobile__list">
+            <li class="navbar__item navbar-mobile__item">
+              <a href="#" class="navbar__link">Домой</a>
+            </li>
+            <li class="navbar__item navbar__item--less navbar-mobile__item">
+              <form action="#">
+                <select class="navbar__select navbar-mobile__select">
+                  <option class="navbar__option">Лендинги</option>
+                  <option class="navbar__option">Лендинги</option>
+                  <option class="navbar__option">Лендинги</option>
+                  <option disabled class="navbar__option">E-commerce</option>
+                </select>
+              </form>
+            </li>
+            <li class="navbar__item navbar-mobile__item">
+              <form action="#">
+                <select class="navbar__select navbar-mobile__select">
+                  <option class="navbar__option">Страницы</option>
+                  <option class="navbar__option">Страницы</option>
+                  <option class="navbar__option">Страницы</option>
+                  <option disabled class="navbar__option">E-commerce</option>
+                </select>
+              </form>
+            </li>
+            <li class="navbar__item navbar__item navbar-mobile__item">
+              <a href="#" class="navbar__link">Помощь</a>
+            </li>
+          </ul>
+          <button class="navbar__button navbar-mobile__btn">Получить</button>
+        </nav>
         <div class="search">
           <h1 class="search__title">Отдел новостей</h1>
           <div class="search__wrapper">
@@ -157,77 +220,81 @@
         </div>
         <!-- /.popular__about -->
         <div class="popular__wrapper">
-          <div class="popular-article">
-            <span class="popular-article__offer">Предложения</span>
-            <h3 class="popular-article__title">
-              Как защитить свою семью от угарного газа
-            </h3>
-            <div class="author">
-              <div class="author__profile">
-                <div class="author__image">
-                  <img
-                    src="src/img/offers/author.png"
-                    alt="Avatar: Author"
-                    class="author__avatar"
-                  />
-                </div>
-                <!-- /.author__image -->
-                <div class="author__info">
-                  <span class="author__name author__name--popular"
-                    >Viola Manisa</span
-                  >
-                  <div class="verify">
+          <a href="details.html" target="_blank">
+            <div class="popular-article">
+              <span class="popular-article__offer">Предложения</span>
+              <h3 class="popular-article__title">
+                Как защитить свою семью от угарного газа
+              </h3>
+              <div class="author">
+                <div class="author__profile">
+                  <div class="author__image">
                     <img
-                      src="src/img/offers/verify.svg"
-                      alt="Icon: Verify"
-                      class="verify__img"
+                      src="src/img/offers/author.png"
+                      alt="Avatar: Author"
+                      class="author__avatar"
                     />
-                    <span class="verify__text">Verified writer</span>
                   </div>
-                  <!-- /.author__verify -->
+                  <!-- /.author__image -->
+                  <div class="author__info">
+                    <span class="author__name author__name--popular"
+                      >Viola Manisa</span
+                    >
+                    <div class="verify">
+                      <img
+                        src="src/img/offers/verify.svg"
+                        alt="Icon: Verify"
+                        class="verify__img"
+                      />
+                      <span class="verify__text">Verified writer</span>
+                    </div>
+                    <!-- /.author__verify -->
+                  </div>
                 </div>
+                <!-- /.author__profile -->
+                <span class="author__date">02 May</span>
               </div>
-              <!-- /.author__profile -->
-              <span class="author__date">02 May</span>
+              <!-- /.author -->
             </div>
-            <!-- /.author -->
-          </div>
+          </a>
           <!-- /.popular__article -->
-          <div class="popular-article popular-article--second">
-            <span class="popular-article__offer">Предложения</span>
-            <h3 class="popular-article__title">
-              Материнство - самая трудная и лучшая работа на свете
-            </h3>
-            <div class="author">
-              <div class="author__profile">
-                <div class="author__image">
-                  <img
-                    src="src/img/popular/avatar.png"
-                    alt="Avatar: Author"
-                    class="author__avatar"
-                  />
-                </div>
-                <!-- /.author__image -->
-                <div class="author__info">
-                  <span class="author__name author__name--popular"
-                    >Joshua William</span
-                  >
-                  <div class="verify">
+          <a href="details.html" target="_blank">
+            <div class="popular-article popular-article--second">
+              <span class="popular-article__offer">Предложения</span>
+              <h3 class="popular-article__title">
+                Материнство - самая трудная и лучшая работа на свете
+              </h3>
+              <div class="author">
+                <div class="author__profile">
+                  <div class="author__image">
                     <img
-                      src="src/img/offers/verify.svg"
-                      alt="Icon: Verify"
-                      class="verify__img"
+                      src="src/img/popular/avatar.png"
+                      alt="Avatar: Author"
+                      class="author__avatar"
                     />
-                    <span class="verify__text">Verified writer</span>
                   </div>
-                  <!-- /.author__verify -->
+                  <!-- /.author__image -->
+                  <div class="author__info">
+                    <span class="author__name author__name--popular"
+                      >Joshua William</span
+                    >
+                    <div class="verify">
+                      <img
+                        src="src/img/offers/verify.svg"
+                        alt="Icon: Verify"
+                        class="verify__img"
+                      />
+                      <span class="verify__text">Verified writer</span>
+                    </div>
+                    <!-- /.author__verify -->
+                  </div>
                 </div>
+                <!-- /.author__profile -->
+                <span class="author__date">02 May</span>
               </div>
-              <!-- /.author__profile -->
-              <span class="author__date">02 May</span>
+              <!-- /.author -->
             </div>
-            <!-- /.author -->
-          </div>
+          </a>
           <!-- /.popular__article -->
           <button class="button popular__button popular__button--media">
             Смотреть все
@@ -261,123 +328,129 @@
         </div>
         <!-- /.about -->
         <div class="recent__wrapper">
-          <div class="recent__article">
-            <h3 class="recent__title">Будущее Работы</h3>
-            <p class="recent__text">
-              Большинство людей будут работать на рабочих местах, которых
-              сегодня не существует.
-            </p>
-            <div class="author recent__author">
-              <div class="author__profile">
-                <div class="author__image">
-                  <img
-                    src="src/img/recent/avatar-1.png"
-                    alt="Avatar: Author"
-                    class="author__avatar"
-                  />
-                </div>
-                <!-- /.author__image -->
-                <div class="author__info">
-                  <span class="author__name author__name--recent"
-                    >Lina Hicks</span
-                  >
-                  <div class="verify">
+          <a href="details.html" target="_blank">
+            <div class="recent__article">
+              <h3 class="recent__title">Будущее Работы</h3>
+              <p class="recent__text">
+                Большинство людей будут работать на рабочих местах, которых
+                сегодня не существует.
+              </p>
+              <div class="author recent__author">
+                <div class="author__profile">
+                  <div class="author__image">
                     <img
-                      src="src/img/offers/verify.svg"
-                      alt="Icon: Verify"
-                      class="verify__img"
+                      src="src/img/recent/avatar-1.png"
+                      alt="Avatar: Author"
+                      class="author__avatar"
                     />
-                    <span class="verify__text verify__text--recent"
-                      >Verified writer</span
-                    >
                   </div>
-                  <!-- /.author__verify -->
+                  <!-- /.author__image -->
+                  <div class="author__info">
+                    <span class="author__name author__name--recent"
+                      >Lina Hicks</span
+                    >
+                    <div class="verify">
+                      <img
+                        src="src/img/offers/verify.svg"
+                        alt="Icon: Verify"
+                        class="verify__img"
+                      />
+                      <span class="verify__text verify__text--recent"
+                        >Verified writer</span
+                      >
+                    </div>
+                    <!-- /.author__verify -->
+                  </div>
                 </div>
+                <!-- /.author__profile -->
+                <span class="author__date author__date--recent">02 May</span>
               </div>
-              <!-- /.author__profile -->
-              <span class="author__date author__date--recent">02 May</span>
+              <!-- /.author -->
             </div>
-            <!-- /.author -->
-          </div>
-          <!-- /.recent__article -->
-          <div class="recent__article recent__article--second">
-            <h3 class="recent__title">Будущее Данных</h3>
-            <p class="recent__text recent__text--big">
-              Благодаря нескончаемым объемам данных и количеству инсайтов
-            </p>
-            <div class="author recent__author">
-              <div class="author__profile">
-                <div class="author__image">
-                  <img
-                    src="src/img/recent/avatar-2.png"
-                    alt="Avatar: Author"
-                    class="author__avatar"
-                  />
-                </div>
-                <!-- /.author__image -->
-                <div class="author__info">
-                  <span class="author__name author__name--recent"
-                    >Tyler Murray</span
-                  >
-                  <div class="verify">
+            <!-- /.recent__article -->
+          </a>
+          <a href="details.html" target="_blank">
+            <div class="recent__article recent__article--second">
+              <h3 class="recent__title">Будущее Данных</h3>
+              <p class="recent__text recent__text--big">
+                Благодаря нескончаемым объемам данных и количеству инсайтов
+              </p>
+              <div class="author recent__author">
+                <div class="author__profile">
+                  <div class="author__image">
                     <img
-                      src="src/img/offers/verify.svg"
-                      alt="Icon: Verify"
-                      class="verify__img"
+                      src="src/img/recent/avatar-2.png"
+                      alt="Avatar: Author"
+                      class="author__avatar"
                     />
-                    <span class="verify__text verify__text--recent"
-                      >Verified writer</span
-                    >
                   </div>
-                  <!-- /.author__verify -->
+                  <!-- /.author__image -->
+                  <div class="author__info">
+                    <span class="author__name author__name--recent"
+                      >Tyler Murray</span
+                    >
+                    <div class="verify">
+                      <img
+                        src="src/img/offers/verify.svg"
+                        alt="Icon: Verify"
+                        class="verify__img"
+                      />
+                      <span class="verify__text verify__text--recent"
+                        >Verified writer</span
+                      >
+                    </div>
+                    <!-- /.author__verify -->
+                  </div>
                 </div>
+                <!-- /.author__profile -->
+                <span class="author__date author__date--recent">02 May</span>
               </div>
-              <!-- /.author__profile -->
-              <span class="author__date author__date--recent">02 May</span>
+              <!-- /.author -->
             </div>
-            <!-- /.author -->
-          </div>
-          <!-- /.recent__article -->
-          <div class="recent__article recent__article--third">
-            <h3 class="recent__title">Будущее Обучения</h3>
-            <p class="recent__text recent__text--big">
-              Постоянная способность учиться будет на самых важных
-              <br class="recent__br" />
-              навыках.
-            </p>
-            <div class="author recent__author">
-              <div class="author__profile">
-                <div class="author__image">
-                  <img
-                    src="src/img/recent/avatar-3.png"
-                    alt="Avatar: Author"
-                    class="author__avatar"
-                  />
-                </div>
-                <!-- /.author__image -->
-                <div class="author__info">
-                  <span class="author__name author__name--recent"
-                    >Warren Casey</span
-                  >
-                  <div class="verify">
+            <!-- /.recent__article -->
+          </a>
+          <a href="details.html" target="_blank">
+            <div class="recent__article recent__article--third">
+              <h3 class="recent__title">Будущее Обучения</h3>
+              <p class="recent__text recent__text--big">
+                Постоянная способность учиться будет на самых важных
+                <br class="recent__br" />
+                навыках.
+              </p>
+              <div class="author recent__author">
+                <div class="author__profile">
+                  <div class="author__image">
                     <img
-                      src="src/img/offers/verify.svg"
-                      alt="Icon: Verify"
-                      class="verify__img"
+                      src="src/img/recent/avatar-3.png"
+                      alt="Avatar: Author"
+                      class="author__avatar"
                     />
-                    <span class="verify__text verify__text--recent"
-                      >Verified writer</span
-                    >
                   </div>
-                  <!-- /.author__verify -->
+                  <!-- /.author__image -->
+                  <div class="author__info">
+                    <span class="author__name author__name--recent"
+                      >Warren Casey</span
+                    >
+                    <div class="verify">
+                      <img
+                        src="src/img/offers/verify.svg"
+                        alt="Icon: Verify"
+                        class="verify__img"
+                      />
+                      <span class="verify__text verify__text--recent"
+                        >Verified writer</span
+                      >
+                    </div>
+                    <!-- /.author__verify -->
+                  </div>
                 </div>
+                <!-- /.author__profile -->
+                <span class="author__date author__date--recent">02 May</span>
               </div>
-              <!-- /.author__profile -->
-              <span class="author__date author__date--recent">02 May</span>
+              <!-- /.author -->
             </div>
-            <!-- /.author -->
-          </div>
-          <!-- /.recent__article -->
+            <!-- /.recent__article -->
+          </a>
           <button class="button recent__button recent__button--media">
             Смотреть все
             <img
@@ -943,48 +1016,48 @@
           </div>
           <!-- /.footer-grid__about -->
           <div class="footer-grid__product">
-            <h4 class="footer-grid__title">Продукт</h4>
+            <h4 class="footer-grid__title"><a href="#">Продукт</a></h4>
             <ul class="footer-grid__ul">
-              <li class="footer-grid__item">Лендинг</li>
-              <li class="footer-grid__item">Функции</li>
-              <li class="footer-grid__item">Документация</li>
-              <li class="footer-grid__item">Скидки</li>
-              <li class="footer-grid__item">Расценки</li>
+              <li class="footer-grid__item"><a href="#">Лендинг</a></li>
+              <li class="footer-grid__item"><a href="#">Функции</a></li>
+              <li class="footer-grid__item"><a href="#">Документация</a></li>
+              <li class="footer-grid__item"><a href="#">Скидки</a></li>
+              <li class="footer-grid__item"><a href="#">Расценки</a></li>
             </ul>
           </div>
           <!-- /.footer-grid__product -->
           <div class="footer-grid__service">
-            <h4 class="footer-grid__title">Сервисы</h4>
+            <h4 class="footer-grid__title"><a href="#">Сервисы</a></h4>
             <ul class="footer-grid__ul">
-              <li class="footer-grid__item">Документация</li>
-              <li class="footer-grid__item">Дизайн</li>
-              <li class="footer-grid__item">Темы</li>
-              <li class="footer-grid__item">Иллюстрации</li>
-              <li class="footer-grid__item">UI Kit</li>
+              <li class="footer-grid__item"><a href="#">Документация</a></li>
+              <li class="footer-grid__item"><a href="#">Дизайн</a></li>
+              <li class="footer-grid__item"><a href="#">Темы</a></li>
+              <li class="footer-grid__item"><a href="#">Иллюстрации</a></li>
+              <li class="footer-grid__item"><a href="#">UI Kit</a></li>
             </ul>
           </div>
           <!-- /.footer-grid__service -->
           <div class="footer-grid__company">
-            <h4 class="footer-grid__title">Компания</h4>
+            <h4 class="footer-grid__title"><a href="#">Компания</a></h4>
             <ul class="footer-grid__ul">
-              <li class="footer-grid__item">О нас</li>
-              <li class="footer-grid__item">Условия</li>
+              <li class="footer-grid__item"><a href="#">О нас</a></li>
+              <li class="footer-grid__item"><a href="#">Условия</a></li>
               <li
                 class="footer-grid__item footer-grid__item--less"
                 id="grid-item"
               >
-                Политика конфиденциальности
+                <a href="#">Политика конфиденциальности</a>
               </li>
-              <li class="footer-grid__item">Careers</li>
+              <li class="footer-grid__item"><a href="#">Careers</a></li>
             </ul>
           </div>
           <!-- /.footer-grid__company -->
           <div class="footer-grid__more">
             <h4 class="footer-grid__title" id="grid-title">Более</h4>
             <ul class="footer-grid__ul">
-              <li class="footer-grid__item">Документация</li>
-              <li class="footer-grid__item">Лицензия</li>
-              <li class="footer-grid__item">Изменения</li>
+              <li class="footer-grid__item"><a href="#">Документация</a></li>
+              <li class="footer-grid__item"><a href="#">Лицензия</a></li>
+              <li class="footer-grid__item"><a href="#">Изменения</a></li>
             </ul>
           </div>
           <!-- /.footer-grid__more -->
@@ -1007,6 +1080,24 @@
       </div>
       <!-- /.container -->
     </footer>
+    <div class="modal">
+      <div class="modal__overlay"></div>
+      <!-- /.modal__overlay -->
+      <div class="modal__wrapper">
+        <img
+          src="src/img/close-modal.svg"
+          alt="Icon: Close-Modal"
+          class="modal__close"
+        />
+        <h3 class="modal__title">Подписаться на рассылку</h3>
+        <p class="modal__text">Напишите свои данные для получения рассылки!</p>
+        <form action="send.php" class="modal__form">
+          <input type="email" class="modal__input" placeholder="E-mail*" />
+          <input type="text" class="modal__input" placeholder="ФИО*" />
+          <button class="modal__button">Отправить</button>
+        </form>
+      </div>
+    </div>
     <script src="src/js/jquery-3.6.0.min.js"></script>
     <script src="src/js/swiper-bundle.min.js"></script>
     <script src="src/js/main.js"></script>
