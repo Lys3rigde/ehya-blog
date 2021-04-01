@@ -104,6 +104,14 @@ $(document).ready(() => {
       $("body").css("overflow","scroll");
       bodyUnfixPosition(); 
   });
+
+  AOS.init({
+    disable: () => {
+      const maxWidth = 992;
+      return window.innerWidth < maxWidth;
+    }
+  });
+
   const bodyFixPosition = () => {
 
     setTimeout(() => {

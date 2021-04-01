@@ -9,7 +9,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="src/css/style.css?v1.06" />
+    <link rel="stylesheet" href="src/css/aos.css" />
+    <link rel="stylesheet" href="src/css/style.css?v1.09" />
     <link rel="icon" href="src/img/favicon.ico" />
     <title>Ehya Blog</title>
   </head>
@@ -66,52 +67,55 @@
         </div>
         <!-- /.header__wrapper -->
         <nav class="navbar navbar-mobile" id="navbar">
-          <div class="navbar__wrapper">
-            <a href="index.html" class="logo">
+          <div class="navbar-grid">
+            <div class="navbar__wrapper">
+              <a href="index.html" class="logo">
+                <img
+                  src="src/img/header/header-logo.svg"
+                  alt="Logotype: Ehya"
+                  class="navbar__logo"
+                />
+              </a>
               <img
-                src="src/img/header/header-logo.svg"
-                alt="Logotype: Ehya"
-                class="navbar__logo"
+                src="src/img/header/mob-menu.svg"
+                alt="Icon: Mobile menu"
+                class="navbar-button"
               />
-            </a>
-            <img
-              src="src/img/header/mob-menu.svg"
-              alt="Icon: Mobile menu"
-              class="navbar-button"
-            />
+            </div>
+            <!-- /.navbar__wrapper -->
+            <ul class="navbar-mobile__list">
+              <li class="navbar__item navbar-mobile__item">
+                <a href="#" class="navbar__link">Домой</a>
+              </li>
+              <li class="navbar__item navbar__item--menu navbar-mobile__item">
+                <a href="#" class="navbar__link navbar__link--left">Лендинги</a>
+                <img src="src/img/header/angle-down.svg" alt="" />
+                <ul class="submenu submenu--mobile">
+                  <li><a href="">Визитки</a></li>
+                  <li><a href="">Промо сайт</a></li>
+                  <li><a href="">E-commerce</a></li>
+                </ul>
+              </li>
+              <li class="navbar__item navbar__item--second navbar-mobile__item">
+                <a href="#" class="navbar__link">Страницы</a>
+                <img src="src/img/header/angle-down.svg" alt="" />
+                <ul class="submenu-second submenu-second--mobile">
+                  <li><a href="">Lorem</a></li>
+                  <li><a href="">Ipsum</a></li>
+                  <li><a href="">Dolor</a></li>
+                </ul>
+              </li>
+              <li class="navbar__item navbar-mobile__item">
+                <a href="#" class="navbar__link">Помощь</a>
+              </li>
+            </ul>
+            <button
+              class="navbar__button navbar-mobile__btn navbar__button--menu"
+            >
+              Получить
+            </button>
           </div>
-          <!-- /.navbar__wrapper -->
-          <ul class="navbar-mobile__list">
-            <li class="navbar__item navbar-mobile__item">
-              <a href="#" class="navbar__link">Домой</a>
-            </li>
-            <li class="navbar__item navbar__item--menu navbar-mobile__item">
-              <a href="#" class="navbar__link navbar__link--left">Лендинги</a>
-              <img src="src/img/header/angle-down.svg" alt="" />
-              <ul class="submenu submenu--mobile">
-                <li><a href="">Визитки</a></li>
-                <li><a href="">Промо сайт</a></li>
-                <li><a href="">E-commerce</a></li>
-              </ul>
-            </li>
-            <li class="navbar__item navbar__item--second navbar-mobile__item">
-              <a href="#" class="navbar__link">Страницы</a>
-              <img src="src/img/header/angle-down.svg" alt="" />
-              <ul class="submenu-second submenu-second--mobile">
-                <li><a href="">Lorem</a></li>
-                <li><a href="">Ipsum</a></li>
-                <li><a href="">Dolor</a></li>
-              </ul>
-            </li>
-            <li class="navbar__item navbar-mobile__item">
-              <a href="#" class="navbar__link">Помощь</a>
-            </li>
-          </ul>
-          <button
-            class="navbar__button navbar-mobile__btn navbar__button--menu"
-          >
-            Получить
-          </button>
+          <!-- /.navbar-grid -->
         </nav>
         <div class="search">
           <h1 class="search__title">Отдел новостей</h1>
@@ -220,7 +224,12 @@
         </div>
         <!-- /.popular__about -->
         <div class="popular__wrapper">
-          <a href="details.html" target="_blank">
+          <a
+            href="details.html"
+            data-aos-duration="1500"
+            data-aos="fade-right"
+            target="_blank"
+          >
             <div class="popular-article">
               <span class="popular-article__offer">Предложения</span>
               <h3 class="popular-article__title">
@@ -258,7 +267,12 @@
             </div>
           </a>
           <!-- /.popular__article -->
-          <a href="details.html" target="_blank">
+          <a
+            href="details.html"
+            data-aos-duration="1500"
+            data-aos="fade-left"
+            target="_blank"
+          >
             <div class="popular-article popular-article--second">
               <span class="popular-article__offer">Предложения</span>
               <h3 class="popular-article__title">
@@ -328,7 +342,12 @@
         </div>
         <!-- /.about -->
         <div class="recent__wrapper">
-          <a href="details.html" target="_blank">
+          <a
+            href="details.html"
+            data-aos-duration="1500"
+            data-aos="fade-down"
+            target="_blank"
+          >
             <div class="recent__article">
               <h3 class="recent__title">Будущее Работы</h3>
               <p class="recent__text">
@@ -369,7 +388,12 @@
             </div>
             <!-- /.recent__article -->
           </a>
-          <a href="details.html" target="_blank">
+          <a
+            href="details.html"
+            data-aos-duration="1500"
+            data-aos="fade-down"
+            target="_blank"
+          >
             <div class="recent__article recent__article--second">
               <h3 class="recent__title">Будущее Данных</h3>
               <p class="recent__text recent__text--big">
@@ -409,7 +433,12 @@
             </div>
             <!-- /.recent__article -->
           </a>
-          <a href="details.html" target="_blank">
+          <a
+            href="details.html"
+            data-aos-duration="1500"
+            data-aos="fade-down"
+            target="_blank"
+          >
             <div class="recent__article recent__article--third">
               <h3 class="recent__title">Будущее Обучения</h3>
               <p class="recent__text recent__text--big">
@@ -674,7 +703,11 @@
         </div>
         <!-- /.all-articles__info -->
         <div class="all-articles__wrapper">
-          <div class="all-articles-main all-articles-main--first">
+          <div
+            class="all-articles-main all-articles-main--first"
+            data-aos-duration="1500"
+            data-aos="fade-right"
+          >
             <span class="all-articles-main__offer">Предложения</span>
             <h3 class="all-articles-main__title">
               Как защитить свою семью от угарного газа
@@ -712,7 +745,11 @@
             <!-- /.author -->
           </div>
           <!-- /.all-articles-main -->
-          <div class="all-articles-main all-articles-main--second">
+          <div
+            class="all-articles-main all-articles-main--second"
+            data-aos-duration="1500"
+            data-aos="fade-left"
+          >
             <span class="all-articles-main__offer">Предложения</span>
             <h3 class="all-articles-main__title">
               Материнство - самая трудная и лучшая работа на свете
@@ -750,7 +787,11 @@
             <!-- /.author -->
           </div>
           <!-- /.all-articles-main -->
-          <div class="all-articles-secondary all-articles-secondary--third">
+          <div
+            class="all-articles-secondary all-articles-secondary--third"
+            data-aos-duration="1500"
+            data-aos="fade-right"
+          >
             <h2 class="all-articles-secondary__title">Будущее Работы</h2>
             <p class="all-articles-secondary__text">
               Большинство людей будут работать на рабочих местах, которых
@@ -789,7 +830,11 @@
             <!-- /.author -->
           </div>
           <!-- /.all-articles-secondary -->
-          <div class="all-articles-secondary all-articles-secondary--fourth">
+          <div
+            class="all-articles-secondary all-articles-secondary--fourth"
+            data-aos-duration="1500"
+            data-aos="fade-up"
+          >
             <h2
               class="all-articles-secondary__title all-articles-secondary__title--media"
             >
@@ -833,7 +878,11 @@
             <!-- /.author -->
           </div>
           <!-- /.all-articles-secondary -->
-          <div class="all-articles-secondary all-articles-secondary--fifth">
+          <div
+            class="all-articles-secondary all-articles-secondary--fifth"
+            data-aos-duration="1500"
+            data-aos="fade-left"
+          >
             <h2
               class="all-articles-secondary__title all-articles-secondary__title--media"
             >
@@ -1120,6 +1169,7 @@
     </div>
     <script src="src/js/jquery-3.6.0.min.js"></script>
     <script src="src/js/swiper-bundle.min.js"></script>
+    <script src="src/js/aos.js"></script>
     <script src="src/js/main.js"></script>
   </body>
 </html>

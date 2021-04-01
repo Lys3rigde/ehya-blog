@@ -33,7 +33,6 @@
     right: 0
     background: #1A3245
     width: 100%
-    height: 100%
     z-index: 200
     padding-top: 55px
     &__list
@@ -46,6 +45,15 @@
       margin: 0
     &__item
       width: 45%
+  &-grid
+    display: flex
+    width: 100%
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    min-height: 500px
+    height: 100%
+    overflow-y: scroll
   &__list
     list-style-type: none
     display: flex
