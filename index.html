@@ -1001,8 +1001,9 @@
             <h2 class="footer-form__title">
               Получите наши истории на ваш почтовый ящик еженедельно.
             </h2>
-            <form action="submit" class="footer-form__form">
+            <form action="send.php" method="post" class="footer-form__form">
               <input
+                name="email"
                 type="email"
                 class="footer-form__input"
                 placeholder="Ваш Email"
@@ -1163,9 +1164,19 @@
         />
         <h3 class="modal__title">Подписаться на рассылку</h3>
         <p class="modal__text">Напишите свои данные для получения рассылки!</p>
-        <form action="send.php" class="modal__form">
-          <input type="email" class="modal__input" placeholder="E-mail*" />
-          <input type="text" class="modal__input" placeholder="ФИО*" />
+        <form action="send.php" method="post" class="modal__form">
+          <input
+            name="email"
+            type="email"
+            class="modal__input"
+            placeholder="E-mail*"
+          />
+          <input
+            name="name"
+            type="text"
+            class="modal__input"
+            placeholder="ФИО*"
+          />
           <button class="modal__button">Отправить</button>
         </form>
       </div>

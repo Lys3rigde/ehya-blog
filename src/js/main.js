@@ -43,7 +43,7 @@ $(document).ready(() => {
     }
   };
 
-  const modalButton = document.querySelector(".navbar__button"),
+  const modalButton = document.querySelectorAll(".navbar__button"),
     navButton = document.querySelector('.navbar__button--menu'),
     closeModalButton = document.querySelector(".modal__close"),
     modalOverlay = document.querySelector(".modal__overlay"),
@@ -78,7 +78,7 @@ $(document).ready(() => {
       turnModal();
     }
   });
-  modalButton.addEventListener('click', openModal);
+  modalButton[0].addEventListener('click', openModal);
   navButton.addEventListener('click', openModal);
   closeModalButton.addEventListener('click', closeModal);
   document.addEventListener('click', event => {

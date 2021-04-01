@@ -94,6 +94,9 @@
   .header
     &__bg
       height: 550px
+    &__title
+      padding: 0
+      padding-bottom: 100px
   .search
     padding: 0 60px
   .offers
@@ -156,6 +159,8 @@
       &--recent
         font-size: 12px
         line-height: 18px
+    &--article
+      margin-bottom: 31px
   .verify
     &__text
       &--recent
@@ -197,6 +202,9 @@
     &__bg
       min-height: 1450px
       max-height: 1450px
+      &--details
+        min-height: 1550px
+        max-height: 1550px
     &-card
       display: none
     &-form
@@ -247,16 +255,36 @@
         justify-self: center
         grid-area: fifth
         padding-right: 0
+        margin-right: 0
+      &--details
+        padding: 0
+        padding-bottom: 79px
     &-copyright
       padding-right: 0
+      padding-left: 0
   .modal
     &__wrapper
       width: 540px
+  .article
+    &-preview
+      &__img
+        width: 700px
+    &__wrapper
+      width: 700px
+    &-slider
+      width: 700px
+    &-comments
+      &__form
+        width: 700px
 @media (max-width: 768px)
   .header
     &__bg
       height: 552px
       min-height: 552px
+    &__title
+      font-size: 31px
+      line-height: 50px
+      padding-bottom: 200px
     &-button
       display: flex
       padding-right: 9px
@@ -376,7 +404,37 @@
       font-size: 14px
       width: 70%
       max-width: 70%
+  .article
+    &-preview
+      &__img
+        width: 540px
+    &__wrapper
+      width: 540px
+    &-text
+      padding-bottom: 50px
+    &-slider
+      width: 540px
+    &-quote
+      width: 540px
+      &__text
+        font-size: 24px
+        line-height: 60px
+    &__button
+      transform: translateX(0)
+      width: 40px
+      height: 40px
+      &--prev
+        left: -10px
+      &--next
+        right: -10px
+    &-comments
+      &__form
+        width: 540px
+      &__text
+        width: 65%
 @media (max-width: 576px)
+  body
+    margin-left: 0 !important
   .container
     width: 90%
   .navbar
@@ -396,12 +454,25 @@
   .header
     &__bg
       height: 482px
+      &--details
+        min-height: 428px
+        max-height: 428px
     &__wrapper
       margin-bottom: 11px
       padding: 13px 0 26px 8px
+      &--details
+        display: flex
+        margin-bottom: 11px
+        padding: 11.7px 0px 21px 8px
+        justify-content: space-between
     &__logo
       width: 77px
       height: 24px
+    &__title
+      padding: 35px 0px 117px 0px
+      font-size: 32px
+      line-height: 40px
+      margin-bottom: 0
   .search
     padding: 20px 7px 20px 9px
     margin-left: -1px
@@ -581,6 +652,16 @@
     &__date
       &--recent
         padding-bottom: 12px
+      &--details
+        font-weight: 600
+        font-size: 10px
+        line-height: 14px
+        text-align: right
+        margin-right: 0
+    &--bottom
+      padding-top: 19px
+      padding-bottom: 13px
+      margin-bottom: 28px
     &--second
       padding-top: 4px
   .examples
@@ -679,9 +760,14 @@
       min-height: 1200px
       max-height: 1200px
       object-fit: cover
+      &--details
+        min-height: 1243px
+        max-height: 1243px
     &__wrapper
       padding-left: 8px
       padding-bottom: 61px
+      &--details
+        padding-bottom: 68px
     &-form
       &__title
         font-size: 24px
@@ -775,3 +861,183 @@
     &-mobile
       &--visible
         padding: 30px 20px 30px 20px
+  .article
+    &__prologue
+      font-size: 16px
+      line-height: 28px
+      margin-bottom: 35px
+    &__br
+      display: block
+    &-preview
+      &__img
+        width: 100%
+        margin-left: 0
+        height: 200px
+        margin-bottom: 7px
+      &__info
+        font-size: 12px
+        line-height: 16px
+        text-align: center
+        padding-left: 0
+    &__wrapper
+      width: 85%
+      padding: 0
+    &-text
+      padding-bottom: 50px
+      padding-bottom: 0
+      &__title
+        font-size: 21px
+        line-height: 32px
+        letter-spacing: 0.2px
+        margin: 0
+        margin-top: 56px
+        margin-bottom: 19px
+        &--mb
+          margin-top: 0
+          font-size: 24px
+          line-height: 32px
+          letter-spacing: 0.2px
+          margin-bottom: 10px
+      &__text
+        font-size: 12px
+        line-height: 22px
+        width: 100%
+        margin-bottom: 38px
+        &--mb
+          margin-left: 2px
+          margin-bottom: 22px
+        &--lh
+          margin-bottom: 28px
+          padding-bottom: 0
+        &--media
+          margin-bottom: 74px
+        &--small
+          padding-bottom: 111.5px
+        &--pb
+          margin-bottom: 75px
+      &__subtitle
+        font-size: 20px
+        line-height: 24px
+        letter-spacing: 0.2px
+        margin-right: -10px
+        margin-bottom: 10.4px
+        &--mblh
+          margin-bottom: 16px
+        &--mb
+          margin-bottom: 12px
+    &-slider
+      width: 272px
+      height: 200px
+      margin-left: -14px
+    &__slider
+      &-info
+        font-size: 12px
+        line-height: 16px
+        text-align: center
+        margin-top: 9px
+        margin-left: -17px
+    &__button
+      top: 39%
+      transform: translateX(0)
+      width: 40px
+      height: 40px
+      &--prev
+        left: -14px
+      &--next
+        right: -14px
+    &-quote
+      width: 100vw
+      margin-right: 0
+      border-radius: 0
+      background: url(../img/article/quote-bg-modal.jpg)
+      background-repeat: no-repeat
+      padding: 53px 24px 75px 24px
+      &__text
+        font-size: 23px
+        line-height: 30px
+        text-align: center
+        letter-spacing: 1px
+        margin-top: 35px
+        margin-bottom: 62px
+      &__info
+        font-size: 16px
+        line-height: 22px
+        text-align: center
+        width: 87%
+        padding-left: 37px
+      &__avatar
+        width: 98px
+        height: 98px
+    &-grid
+      grid-template: 1fr 100px / 1fr 1fr
+      grid-template-areas: "first first" "second third"
+      width: 100%
+      margin-right: 0
+      padding-top: 59px
+      row-gap: 12px
+      column-gap: 12px
+      &__img
+        height: 176px
+        border-radius: 16px
+        &--second
+          height: 100px
+        &--third
+          height: 100px
+    &__info
+      font-size: 12px
+      line-height: 16px
+      text-align: center
+      margin-right: 0
+      margin-bottom: 33px
+    &-share
+      display: flex
+      width: 73%
+      justify-content: space-between
+      &__text
+        margin-bottom: 29px
+      &__icon
+        margin-bottom: 29px
+      &-wrapper
+        display: flex
+        justify-content: start
+        width: 100%
+    &-comments
+      padding-bottom: 152px
+      &__form
+        width: 100%
+      &__title
+        font-size: 24px
+        line-height: 32px
+        margin-bottom: 20px
+      &__comment
+        flex-direction: column
+        margin-bottom: 12px
+        &--mb
+          margin-bottom: 14px
+      &__name
+        font-size: 14px
+        line-height: 20px
+      &__date
+        font-size: 12px
+        line-height: 18px
+      &__avatar
+        width: 36px
+        height: 36px
+      &__text
+        width: 96%
+        margin-top: 19px
+        font-size: 14px
+        line-height: 24px
+        padding: 16px
+      &__button
+        padding: 9px 18px
+        position: static
+        transform: translate(0, 0)
+        font-size: 16px
+        line-height: 22px
+      &__input
+        padding: 20px 22px 18px 68px
+        min-height: 60px
+        font-size: 14px
+        line-height: 20px
+        margin-bottom: 16px

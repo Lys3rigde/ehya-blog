@@ -62,7 +62,7 @@
                 <a href="#" class="navbar__link">Помощь</a>
               </li>
             </ul>
-            <button class="navbar__button">Получить</button>
+            <button class="navbar__button" id="navbutton">Получить</button>
           </nav>
         </div>
         <!-- /.header__wrapper -->
@@ -117,7 +117,7 @@
           </div>
           <!-- /.navbar-grid -->
         </nav>
-        <h1 class="header__title">
+        <h1 class="header__title header__title">
           Дешевые авиабилеты - отличный способ сэкономить
         </h1>
       </div>
@@ -155,9 +155,7 @@
             </div>
           </div>
           <!-- /.author__profile -->
-          <span class="author__date author__date--details"
-            >PUBLISHED ON MAY, 2 2019</span
-          >
+          <span class="author__date author__date--details" id="date"></span>
         </div>
         <!-- /.author -->
         <div class="article-preview">
@@ -192,7 +190,7 @@
             Сайнфелд, Рэй Романо, Тим Аллен и даже таких, как Билл Косби и Крис
             Рок. Если вы увлекаетесь музыкой, вы можете посмотреть на певиц,
             таких как Селин Дион, Мэрайя Кэри, Бритни Спирс, Кристина Агилера и
-            Бейонк?, Исполнителей-мужчин, таких как Фил Коллинз, Эрик Клэптон,
+            Бейонк?, Исполнителей‑мужчин,таких как Фил Коллинз, Эрик Клэптон,
             Snoopy Dog, и таких групп, как Oasis и Bon Jovi. Я мог бы продолжать
             и продолжать, но список бесконечен. Если вы увлекаетесь магией, вы
             можете наблюдать, как фокусники, такие как Дэвид Копперфилд, делают
@@ -257,8 +255,8 @@
         <!-- /.article__slider-wrapper -->
         <div class="article-text article-text--pb">
           <h2 class="article-text__title article-text__title--mb">
-            Достопримечательности, которые вы должны увидеть во время своего
-            визита в Вегас:
+            Достопримечательнос<br class="article__br" />ти, которые вы должны
+            увидеть во время своего визита в Вегас:
           </h2>
           <p
             class="article-text__text article-text__text--lh article-text__text--mb"
@@ -279,7 +277,7 @@
             Bonnie Springs
           </h3>
           <p
-            class="article-text__text article-text__text--mb article-text__text--lh"
+            class="article-text__text article-text__text--mb article-text__text--lh article-text__text--media"
           >
             Кто не может устоять перед поездкой в ​​один из старых городов,
             подобных тем, что в западных фильмах о стрельбе из оружия? Вашим
@@ -304,10 +302,7 @@
             одно и то же, раз за разом, ожидая получить другой результат или
             что-то другое случится.
           </p>
-          <span class="article-quote__info">
-            Даниэль принимает гостей в Джокьякарте, чтобы заработать
-            дополнительные деньги
-          </span>
+          <span class="article-quote__info" id="quote"> </span>
           <img
             src="src/img/article/avatar.jpg"
             alt=""
@@ -357,7 +352,9 @@
           <h3 class="article-text__subtitle article-text__subtitle--mb">
             Bonnie Springs
           </h3>
-          <p class="article-text__text article-text__text--lh">
+          <p
+            class="article-text__text article-text__text--lh article-text__text--pb"
+          >
             Кто не может устоять перед поездкой в ​​один из старых городов,
             подобных тем, что в западных фильмах о стрельбе из оружия? Вашим
             пунктом назначения должна быть Старая Невада. Там вы сможете
@@ -460,7 +457,7 @@
               </div>
             </div>
             <!-- /.article-comments__profile -->
-            <p class="article-comments__text">
+            <p class="article-comments__text" id="comment">
               Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
               scelerisque ante sollicitudin.
             </p>
@@ -498,6 +495,7 @@
             </h2>
             <form action="submit" class="footer-form__form">
               <input
+                name="email"
                 type="email"
                 class="footer-form__input"
                 placeholder="Ваш Email"
@@ -658,9 +656,19 @@
         />
         <h3 class="modal__title">Подписаться на рассылку</h3>
         <p class="modal__text">Напишите свои данные для получения рассылки!</p>
-        <form action="send.php" class="modal__form">
-          <input type="email" class="modal__input" placeholder="E-mail*" />
-          <input type="text" class="modal__input" placeholder="ФИО*" />
+        <form action="send.php" method="post" class="modal__form">
+          <input
+            name="email"
+            type="email"
+            class="modal__input"
+            placeholder="E-mail*"
+          />
+          <input
+            name="name"
+            type="text"
+            class="modal__input"
+            placeholder="ФИО*"
+          />
           <button class="modal__button">Отправить</button>
         </form>
       </div>
