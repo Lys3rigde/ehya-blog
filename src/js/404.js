@@ -80,6 +80,24 @@ $(document).ready(() => {
   });
   $('.phone').mask('+7 (000) 000-00-00');
 
+  const toTop = () => {
+    const toTop = document.querySelector('.toTop');
+    toTop.style.cursor = 'pointer';
+    toTop.style.display = 'none';
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 640) toTop.style.display = 'flex';
+        else toTop.style.display = 'none';
+    });
+
+    toTop.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+      });
+  };
+  toTop();
+
   const bodyFixPosition = () => {
 
     setTimeout(() => {
