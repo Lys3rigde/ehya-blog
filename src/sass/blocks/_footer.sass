@@ -12,9 +12,12 @@
     display: flex
     justify-content: space-between
     align-items: center
-    padding-bottom: 224px
+    padding-bottom: 220px
   &-form
     width: 55%
+    padding-bottom: 6px
+    &--details
+      padding-bottom: 0
     &__title
       font-family: Roboto
       font-style: normal
@@ -58,6 +61,11 @@
       line-height: 28px
       color: $text
       width: 88%
+  &__input
+    &-group
+      position: relative
+  & label
+    font-size: 14px
   &-card
     padding-top: 10px
     padding-bottom: 32px
@@ -90,9 +98,9 @@
     &__wrapper
       background: $primary
       width: 466px
-      height: 385px
+      min-height: 385px
       border-radius: 16px
-      padding: 8px 7px 32px 9px
+      padding: 8px 7px 0px 9px
       z-index: -1
       background-size: 100%
     &__img
@@ -177,6 +185,7 @@
     flex-direction: column
     align-items: center
     padding-right: 28px
+    padding-bottom: 65px
     &__logo
       width: 56px
       height: 56px

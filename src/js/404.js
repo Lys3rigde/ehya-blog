@@ -1,65 +1,5 @@
 $(document).ready(() => {
-  const articleSlider = new Swiper('.article-slider', {
-    // Optional parameters
-    loop: true,
-    // Navigation arrows
-    navigation: {
-      nextEl: '.examples-grid__button--next',
-      prevEl: '.examples-grid__button--prev',
-    },
-    // keyboard control 
-    keyboard: {
-      enabled: true,
-      onlyInViewport: true,
-    }
-  });
-  if ( $(window).width() > 992 ) {
-    $(window).scroll(() => {
-      const height = $(window).scrollTop();
-      if(height > 680){
-      $('.article-share').addClass('article-share--active');
-      } else{
-      $('.article-share').removeClass('article-share--active');
-      }
-      });
-      
-    $(window).scroll(() => {
-      const height = $(window).scrollTop();
-      if (height > 5400) {
-      $('.article-share').removeClass('article-share--active');
-      } 
-    });
-  }
-
-  const gridItem = document.getElementById('grid-item'),
-    gridTitle = document.getElementById('grid-title'),
-    date = document.getElementById('date'),
-    quote = document.getElementById('quote'),
-    comment = document.getElementById('comment'),
-    dateDetails = document.querySelectorAll('.author__date--details');
-
-  const checkScreen = () => {
-    const screenWidth = window.screen.width;
-    if (screenWidth <= 576) {
-      gridItem.innerHTML = `Privacy Policy`
-      gridTitle.innerHTML = `Ещё..`
-      date.innerHTML = `MAY, 2 2019`
-      dateDetails[1].innerHTML = `MAY, 2 2019`
-      quote.innerHTML = `Daniel hosts in Yogyakarta to earn extra money`
-      comment.innerHTML = `Cras sit amet nibh libero, in gravida nulla. Nulla vel met scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.`
-    } else {
-      gridItem.innerHTML = `Политика конфиденциальности`
-      gridTitle.innerHTML = `Более`
-      date.innerHTML = `PUBLISHED ON MAY, 2 2019`
-      dateDetails[1].innerHTML = `PUBLISHED ON MAY, 2 2019`
-      quote.innerHTML = `Даниэль принимает гостей в Джокьякарте, чтобы заработать
-      дополнительные деньги`
-      comment.innerHTML = `              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
-      scelerisque ante sollicitudin.`
-    }
-  };
-
-  const modalButton = document.querySelector(".navbar__button"),
+  const modalButton = document.querySelectorAll(".navbar__button"),
     navButton = document.querySelector('.navbar__button--menu'),
     closeModalButton = document.querySelector(".modal__close"),
     modalOverlay = document.querySelector(".modal__overlay"),
@@ -94,8 +34,7 @@ $(document).ready(() => {
       turnModal();
     }
   });
-
-  modalButton.addEventListener('click', openModal);
+  modalButton[0].addEventListener('click', openModal);
   navButton.addEventListener('click', openModal);
   closeModalButton.addEventListener('click', closeModal);
   document.addEventListener('click', event => {
@@ -104,8 +43,6 @@ $(document).ready(() => {
       window.open('details.html', '_blank');
     };
   }); 
-  window.addEventListener('resize', checkScreen); 
-  checkScreen();
 
   const menuButton = document.querySelector('.header-button'),
   navbarButton = document.querySelector('.navbar-button')
@@ -165,7 +102,6 @@ $(document).ready(() => {
     }, 15 ); /* Можно задержку ещё меньше, но у меня работало хорошо именно с этим значением на всех устройствах и браузерах */
   
   }
-  // 2. Расфиксация <body>
   function bodyUnfixPosition() {
   
     if ( document.body.hasAttribute('data-body-scroll-fix') ) {
@@ -187,8 +123,4 @@ $(document).ready(() => {
       window.scroll(0, scrollPosition);
     }
   }
-
-  window.addEventListener('resize', checkScreen); 
-  checkScreen();
-});
-
+})

@@ -4,14 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Roboto:wght@700&display=swap"
+    />
+    <link
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Roboto:wght@700&display=swap"
+      media="print"
+      onload="this.media='all'"
     />
     <link rel="stylesheet" href="src/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="src/css/aos.css" />
     <link rel="stylesheet" href="src/css/style.css?v1.10" />
     <link rel="icon" href="src/img/favicon.ico" />
+    <script defer src="src/js/jquery-3.6.0.min.js"></script>
+    <script defer src="src/js/swiper-bundle.min.js"></script>
+    <script defer src="src/js/aos.js"></script>
+    <script defer src="src/js/jquery.mask.min.js"></script>
+    <script defer src="src/js/jquery.validate.min.js"></script>
+    <script defer src="src/js/details.js"></script>
     <title>Details Blog</title>
   </head>
   <body style="margin-left: -20px">
@@ -370,26 +384,30 @@
         <div class="article-share-wrapper">
           <div class="article-share">
             <span class="article-share__text">Share</span>
-            <img
-              src="src/img/article/twitter.svg"
-              alt="Icon: Twitter"
-              class="article-share__icon"
-            />
-            <img
-              src="src/img/article/facebook-f.svg"
-              alt="Icon: Facebook"
-              class="article-share__icon"
-            />
-            <img
-              src="src/img/article/linkedin.svg"
-              alt="Icon: Linkedin"
-              class="article-share__icon"
-            />
-            <img
-              src="src/img/article/instagram.svg"
-              alt="Icon: Instagram"
-              class="article-share__icon"
-            />
+            <a href="https://twitter.com/" target="_blank"
+              ><img
+                src="src/img/article/twitter.svg"
+                alt="Icon: Twitter"
+                class="article-share__icon"
+            /></a>
+            <a href="https://facebook.com/" target="_blank"
+              ><img
+                src="src/img/article/facebook-f.svg"
+                alt="Icon: Facebook"
+                class="article-share__icon"
+            /></a>
+            <a href="https://linkedin.com/" target="_blank"
+              ><img
+                src="src/img/article/linkedin.svg"
+                alt="Icon: Linkedin"
+                class="article-share__icon"
+            /></a>
+            <a href="https://instagram.com/" target="_blank"
+              ><img
+                src="src/img/article/instagram.svg"
+                alt="Icon: Instagram"
+                class="article-share__icon"
+            /></a>
           </div>
         </div>
         <!-- /.article-share-wrapper -->
@@ -489,17 +507,20 @@
       />
       <div class="container">
         <div class="footer__wrapper footer__wrapper--details">
-          <div class="footer-form">
+          <div class="footer-form footer-form--details">
             <h2 class="footer-form__title">
               Получайте наши истории на ваш почтовый ящик еженедельно.
             </h2>
-            <form action="submit" class="footer-form__form">
-              <input
-                name="email"
-                type="email"
-                class="footer-form__input"
-                placeholder="Ваш Email"
-              />
+            <form action="submit" class="send-form footer-form__form">
+              <div class="footer__input-group">
+                <input
+                  name="email"
+                  type="email"
+                  class="footer-form__input"
+                  placeholder="Ваш Email"
+                  required
+                />
+              </div>
               <button class="footer-form__button">Начать</button>
             </form>
             <p class="footer-form__info">
@@ -656,22 +677,43 @@
         />
         <h3 class="modal__title">Подписаться на рассылку</h3>
         <p class="modal__text">Напишите свои данные для получения рассылки!</p>
-        <form action="send.php" method="post" class="modal__form">
-          <input
-            name="email"
-            type="email"
-            class="modal__input"
-            placeholder="E-mail*"
-          />
-          <input
-            name="name"
-            type="text"
-            class="modal__input"
-            placeholder="ФИО*"
-          />
+        <form action="send.php" method="post" class="send-form modal__form">
+          <div class="modal__input-group">
+            <input
+              name="name"
+              type="text"
+              class="modal__input"
+              placeholder="ФИО*"
+              required
+            />
+          </div>
+          <!-- /.modal__input-group -->
+          <div class="modal__input-group">
+            <input
+              name="email"
+              type="email"
+              class="modal__input"
+              placeholder="E-mail*"
+              required
+            />
+          </div>
+          <!-- /.modal__input-group -->
+          <div class="modal__input-group">
+            <input
+              name="phone"
+              type="tel"
+              class="phone modal__input"
+              placeholder="Номер телефона*"
+              required
+            />
+          </div>
+          <!-- /.modal__input-group -->
           <button class="modal__button">Отправить</button>
         </form>
       </div>
+    </div>
+    <div class="toTop">
+      <img src="src/img/toTop.svg" alt="Icon: to Top" class="toTop__img" />
     </div>
     <script src="src/js/jquery-3.6.0.min.js"></script>
     <script src="src/js/swiper-bundle.min.js"></script>

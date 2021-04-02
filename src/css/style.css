@@ -690,6 +690,7 @@ button {
   border: 1px solid #E5EAF4;
   padding: 32px 48px 31px 32px;
   width: 50%;
+  min-height: 381px;
 }
 
 .offers__text {
@@ -858,7 +859,7 @@ button {
   justify-content: space-between;
   position: relative;
   width: 555px;
-  height: 600px;
+  min-height: 600px;
   background-image: url(../img/popular/popular-item.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -868,7 +869,7 @@ button {
 }
 
 .popular-article--second {
-  background-image: url(../img/popular/popular-item-2.png);
+  background-image: url(../img/popular/popular-item-2.jpg);
   object-fit: cover;
   padding-top: 333px;
 }
@@ -941,6 +942,7 @@ button {
   padding: 271px 32px 40px 32px;
   background-image: url(../img/recent/recent-bg.jpg);
   border-radius: 16px;
+  background-size: cover;
   z-index: -2;
 }
 
@@ -1099,11 +1101,11 @@ button {
 
 .offers-grid {
   padding: 0;
-  height: 381px;
+  min-height: 381px;
 }
 
 .offers__img {
-  height: 100%;
+  height: 381px;
   object-fit: cover;
 }
 
@@ -1142,7 +1144,7 @@ button {
   display: grid;
   row-gap: 30px;
   column-gap: 30px;
-  grid-template: 600px 500px/repeat(6, 1fr);
+  grid-template: 1fr min-content/repeat(6, 1fr);
   grid-template-areas: "first first first second second second" "third third fourth fourth fifth fifth";
   margin-bottom: 48px;
   position: relative;
@@ -1158,6 +1160,7 @@ button {
   flex-direction: column;
   justify-content: space-between;
   z-index: 0;
+  min-height: 600px;
 }
 
 .all-articles-main::before {
@@ -1218,6 +1221,7 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 0;
+  min-height: 500px;
 }
 
 .all-articles-secondary::before {
@@ -1312,11 +1316,16 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 224px;
+  padding-bottom: 220px;
 }
 
 .footer-form {
   width: 55%;
+  padding-bottom: 6px;
+}
+
+.footer-form--details {
+  padding-bottom: 0;
 }
 
 .footer-form__title {
@@ -1372,6 +1381,14 @@ button {
   width: 88%;
 }
 
+.footer__input-group {
+  position: relative;
+}
+
+.footer label {
+  font-size: 14px;
+}
+
 .footer-card {
   padding-top: 10px;
   padding-bottom: 32px;
@@ -1410,9 +1427,9 @@ button {
 .footer-card__wrapper {
   background: #FFFFFF;
   width: 466px;
-  height: 385px;
+  min-height: 385px;
   border-radius: 16px;
-  padding: 8px 7px 32px 9px;
+  padding: 8px 7px 0px 9px;
   z-index: -1;
   background-size: 100%;
 }
@@ -1533,6 +1550,7 @@ button {
   flex-direction: column;
   align-items: center;
   padding-right: 28px;
+  padding-bottom: 65px;
 }
 
 .footer-copyright__logo {
@@ -1578,9 +1596,9 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 540px;
+  max-width: 580px;
   scrollbar-display: none;
-  padding: 51px 40px 80px 40px;
+  padding: 51px 40px 60px 40px;
   background-color: #1A3245;
   border-radius: 16px;
   z-index: 500;
@@ -1591,7 +1609,7 @@ button {
 .modal__wrapper--visible {
   visibility: visible;
   height: 90%;
-  max-height: 500px;
+  max-height: 580px;
   overflow: auto;
   scrollbar-display: none;
 }
@@ -1620,12 +1638,16 @@ button {
   height: 46px;
   border: none;
   outline: none;
-  margin-bottom: 30px;
+  margin-top: 30px;
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
   color: #959EAD;
   padding-left: 20px;
+}
+
+.modal__input-group {
+  position: relative;
 }
 
 .modal__button {
@@ -1640,6 +1662,7 @@ button {
   font-weight: 600;
   font-size: 20px;
   line-height: 27px;
+  margin-top: 30px;
 }
 
 .modal__close {
@@ -1647,6 +1670,15 @@ button {
   top: 30px;
   right: 30px;
   cursor: pointer;
+}
+
+label {
+  position: absolute;
+  left: 0;
+  bottom: -22px;
+  font-size: 16px;
+  border-bottom: 1px solid #EB2F29;
+  color: #EB2F29;
 }
 
 .article__wrapper {
@@ -1736,7 +1768,7 @@ button {
 }
 
 .article-text--pb {
-  padding-bottom: 21px;
+  padding-bottom: 19px;
 }
 
 .article-text--small {
@@ -1816,7 +1848,7 @@ button {
   justify-content: space-between;
   flex-direction: column;
   width: 750px;
-  padding: 58px 63px 75px 65px;
+  padding: 58px 63px 75px 58px;
   min-height: 570px;
   background-image: url(../img/article/quote-bg.png);
   background-repeat: no-repeat;
@@ -1834,7 +1866,7 @@ button {
   letter-spacing: 0.09px;
   text-align: center;
   color: #FFFFFF;
-  margin-top: 32px;
+  margin-top: 20px;
   margin-bottom: 14px;
 }
 
@@ -1856,6 +1888,10 @@ button {
   width: 121px;
   height: 120px;
   object-fit: cover;
+}
+
+.article-quote__icon {
+  height: 46px;
 }
 
 .article-grid {
@@ -2056,7 +2092,7 @@ button {
   border-top: 1px solid #E5EAF4;
   border-bottom: 1px solid #E5EAF4;
   height: auto;
-  margin-bottom: 60px;
+  margin-bottom: 65px;
 }
 
 .author__date--details {
@@ -2074,7 +2110,7 @@ button {
 
 .footer__wrapper--details {
   padding-left: 8px;
-  padding-bottom: 222px;
+  padding-bottom: 218px;
 }
 
 .footer-card--details {
@@ -2107,6 +2143,71 @@ button {
   padding-right: 0;
   padding-left: 103px;
   padding-bottom: 64px;
+}
+
+.toTop {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: #1565D8;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toTop__img {
+  width: 30px;
+  height: 30px;
+  fill: #FFFFFF;
+}
+
+.content {
+  padding-top: 300px;
+  padding-bottom: 300px;
+  padding: 300px 200px 300px 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content__img {
+  position: absolute;
+  width: 100%;
+  z-index: -100;
+  object-fit: cover;
+}
+
+.content__title {
+  font-size: 100px;
+  color: #183B56;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.content__subtitle {
+  font-size: 60px;
+  color: #183B56;
+  text-align: center;
+}
+
+.content__btn {
+  padding: 20px 40px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background: #1565D8;
+  color: #FFFFFF;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
 }
 
 @media (max-width: 1400px) {
@@ -2190,6 +2291,9 @@ button {
   .examples-grid__button--next {
     transform: translateX(30%);
   }
+  .content__subtitle {
+    font-size: 40px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -2270,6 +2374,7 @@ button {
   }
   .popular-article {
     width: 350px;
+    min-height: 350px;
     height: 350px;
     padding: 180px 20px 20px 20px;
   }
@@ -2287,7 +2392,8 @@ button {
     width: 440px;
   }
   .recent__button {
-    margin-bottom: 38px;
+    margin-bottom: 0;
+    margin-right: 0;
   }
   .recent__text {
     font-size: 14px;
@@ -2339,6 +2445,7 @@ button {
   }
   .all-articles-main {
     padding: 220px 19px 42px 19px;
+    min-height: 420px;
   }
   .all-articles-main__title {
     font-size: 25px;
@@ -2350,6 +2457,7 @@ button {
   }
   .all-articles-secondary {
     padding: 180px 19px 42px 19px;
+    min-height: 400px;
   }
   .all-articles-secondary__title {
     font-size: 26px;
@@ -2375,6 +2483,7 @@ button {
   }
   .footer-form {
     width: 100%;
+    padding-bottom: 0;
   }
   .footer-form__title {
     font-size: 35px;
@@ -2383,7 +2492,7 @@ button {
     width: 100%;
   }
   .footer-form__input {
-    width: 68%;
+    width: 75%;
   }
   .footer-form__info {
     font-size: 15.9px;
@@ -2460,6 +2569,9 @@ button {
   }
   .article-comments__form {
     width: 700px;
+  }
+  .content {
+    padding: 250px 20px;
   }
 }
 
@@ -2657,6 +2769,12 @@ button {
   .article-comments__text {
     width: 65%;
   }
+  .footer-form__input {
+    width: 67%;
+  }
+  .content {
+    padding: 160px 20px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -2774,6 +2892,7 @@ button {
     width: 100%;
     border-radius: 0 0 16px 16px;
     padding: 23px 19px;
+    min-height: 288px;
   }
   .offers__text {
     text-transform: uppercase;
@@ -2815,6 +2934,7 @@ button {
   .popular__about {
     flex-wrap: wrap;
     margin-bottom: 32px;
+    justify-content: center;
   }
   .popular__title {
     font-size: 24px;
@@ -2836,9 +2956,12 @@ button {
     line-height: 22px;
     padding: 7px 18px;
   }
+  .popular__link {
+    width: 100%;
+  }
   .popular-article {
     width: 100%;
-    height: 320px;
+    min-height: 320px;
     margin-bottom: 16px;
     border-radius: 12px;
     padding: 164px 20px 20px 20px;
@@ -2927,6 +3050,11 @@ button {
     font-size: 14px;
     line-height: 24px;
     text-align: center;
+    width: 100%;
+    max-width: 100%;
+  }
+  .about__info {
+    width: 100%;
   }
   .author__date--recent {
     padding-bottom: 12px;
@@ -2967,10 +3095,10 @@ button {
     top: 27.5%;
   }
   .examples-grid__button--prev {
-    left: 11px;
+    left: 0;
   }
   .examples-grid__button--next {
-    right: 11px;
+    right: 0;
   }
   .examples__button {
     display: none;
@@ -3022,6 +3150,7 @@ button {
   }
   .all-articles-main {
     padding: 164px 20px 20px 20px;
+    min-height: 320px;
   }
   .all-articles-main__offer {
     top: 23px;
@@ -3039,6 +3168,7 @@ button {
   }
   .all-articles-secondary {
     padding: 160px 20px 20px 20px;
+    min-height: 320px;
   }
   .all-articles-secondary__title {
     font-size: 20px;
@@ -3063,8 +3193,8 @@ button {
     margin-left: 8px;
   }
   .footer__bg {
-    min-height: 1200px;
-    max-height: 1200px;
+    min-height: 1230px;
+    max-height: 1230px;
     object-fit: cover;
   }
   .footer__bg--details {
@@ -3164,10 +3294,13 @@ button {
   .footer-copyright {
     display: none;
   }
+  .footer label {
+    bottom: 0;
+  }
   .modal__wrapper {
     max-width: 90%;
     padding: 50px 15px 30px 15px;
-    max-height: 360px;
+    max-height: 450px;
   }
   .modal__title {
     font-size: 20px;
@@ -3179,7 +3312,8 @@ button {
     margin-bottom: 15px;
   }
   .modal__input {
-    margin-bottom: 15px;
+    margin-bottom: 0;
+    margin-top: 20px;
     font-size: 14px;
     line-height: 20px;
   }
@@ -3187,6 +3321,7 @@ button {
     font-size: 14px;
     line-height: 20px;
     height: 48px;
+    margin-top: 20px;
   }
   .navbar-mobile--visible {
     padding: 30px 20px 30px 20px;
@@ -3218,6 +3353,9 @@ button {
   .article-text {
     padding-bottom: 50px;
     padding-bottom: 0;
+  }
+  .article-text--small {
+    padding-top: 111.5px;
   }
   .article-text__title {
     font-size: 21px;
@@ -3251,11 +3389,8 @@ button {
   .article-text__text--media {
     margin-bottom: 74px;
   }
-  .article-text__text--small {
-    padding-bottom: 111.5px;
-  }
   .article-text__text--pb {
-    margin-bottom: 75px;
+    margin-bottom: 77px;
   }
   .article-text__subtitle {
     font-size: 20px;
@@ -3300,6 +3435,7 @@ button {
     border-radius: 0;
     background: url(../img/article/quote-bg-modal.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
     padding: 53px 24px 75px 24px;
   }
   .article-quote__text {
@@ -3321,6 +3457,9 @@ button {
     width: 98px;
     height: 98px;
   }
+  .article-quote__icon {
+    height: 34px;
+  }
   .article-grid {
     grid-template: 1fr 100px / 1fr 1fr;
     grid-template-areas: "first first" "second third";
@@ -3329,6 +3468,7 @@ button {
     padding-top: 59px;
     row-gap: 12px;
     column-gap: 12px;
+    padding-top: 62px;
   }
   .article-grid__img {
     height: 176px;
@@ -3413,6 +3553,23 @@ button {
     font-size: 14px;
     line-height: 20px;
     margin-bottom: 16px;
+  }
+  .content__title--thanks {
+    font-size: 50px;
+  }
+  .content__subtitle {
+    font-size: 30px;
+  }
+  .content__btn {
+    display: flex;
+    padding: 20px 40px;
+  }
+  label {
+    left: 0;
+    bottom: -15px;
+    font-size: 12px;
+    border-bottom: 1px solid #EB2F29;
+    color: #EB2F29;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -7,21 +7,25 @@ require 'src/phpmailer/Exception.php';
 // Переменные, которые отправляет пользователь
 $name = $_POST['name'];
 $email = $_POST['email'];
+$phone = $_POST['phone'];
 
 // Формирование самого письма
 $title = "New Feedback Best Tour Plan";
 $body = "
-<h2>New Subscribe</h2>
-<b>Name:</b><br>$name
-<b>email:</b><br>$email
+<h2>New Feedback</h2>
+<b>Name:</b><br>$name<br><br>
+<b>email:</b>$email<br><br>
+<b>phone:</b>$phone<br>
 ";
 
-if ($name and $email) {
+if ($name and $email and $phone) {
   $title = "New Subscribe Ehya";
   $body = "
-    <h2>New subscribe</h2>
-    <b>email:</b> $email<br><br>
-    <b>Name:</b><br>$name
+    <h2>New Feedback</h2>
+    <b>Name:</b><br>$name<br><br>
+    <b>email:</b>$email<br><br>
+    <b>phone:</b>$phone<br>
+
   ";
 } elseif ($email) {
   $title = "New Subscribe Ehya";
@@ -67,4 +71,4 @@ else {$result = "error";}
 }
 
 // Отображение результата
-header('Location: index.html');   
+header('Location: thankyou.html');   

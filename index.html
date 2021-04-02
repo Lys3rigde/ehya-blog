@@ -4,14 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Roboto:wght@700&display=swap"
+    />
+    <link
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Roboto:wght@700&display=swap"
+      media="print"
+      onload="this.media='all'"
     />
     <link rel="stylesheet" href="src/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="src/css/aos.css" />
     <link rel="stylesheet" href="src/css/style.css?v1.10" />
     <link rel="icon" href="src/img/favicon.ico" />
+    <script defer src="src/js/jquery-3.6.0.min.js"></script>
+    <script defer src="src/js/swiper-bundle.min.js"></script>
+    <script defer src="src/js/aos.js"></script>
+    <script defer src="src/js/jquery.mask.min.js"></script>
+    <script defer src="src/js/jquery.validate.min.js"></script>
+    <script defer src="src/js/main.js"></script>
     <title>Ehya Blog</title>
   </head>
   <body>
@@ -229,6 +243,7 @@
             data-aos-duration="1500"
             data-aos="fade-right"
             target="_blank"
+            class="popular__link"
           >
             <div class="popular-article">
               <span class="popular-article__offer">Предложения</span>
@@ -272,6 +287,7 @@
             data-aos-duration="1500"
             data-aos="fade-left"
             target="_blank"
+            class="popular__link"
           >
             <div class="popular-article popular-article--second">
               <span class="popular-article__offer">Предложения</span>
@@ -522,150 +538,156 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper examples-wrapper">
               <!-- Slides -->
-              <div class="offers offers-grid swiper-slide">
-                <img
-                  src="src/img/examples/slider-1.png"
-                  alt="Image: offers"
-                  class="offers__img"
-                />
-                <div class="offers__wrapper">
-                  <span class="offers__text examples__text">Предложения</span>
-                  <h2 class="offers__title">
-                    Дешевые Авиабилеты - Отличный Способ Сэкономить
-                  </h2>
-                  <p class="offers__info">
-                    В этом цифровом поколении, где информацию можно легко
-                    получить за секунды, визитки ...
-                  </p>
-                  <div class="author">
-                    <div class="author__profile">
-                      <div class="author__image">
-                        <img
-                          src="src/img/offers/author.png"
-                          alt="Avatar: Author"
-                          class="author__avatar"
-                        />
-                      </div>
-                      <!-- /.author__image -->
-                      <div class="author__info">
-                        <span class="author__name">Tony Hawk</span>
-                        <div class="verify">
+              <a class="swiper-slide" href="details.html" target="_blank">
+                <div class="offers offers-grid">
+                  <img
+                    src="src/img/examples/slider-1.png"
+                    alt="Image: offers"
+                    class="offers__img"
+                  />
+                  <div class="offers__wrapper">
+                    <span class="offers__text examples__text">Предложения</span>
+                    <h2 class="offers__title">
+                      Дешевые Авиабилеты - Отличный Способ Сэкономить
+                    </h2>
+                    <p class="offers__info">
+                      В этом цифровом поколении, где информацию можно легко
+                      получить за секунды, визитки ...
+                    </p>
+                    <div class="author">
+                      <div class="author__profile">
+                        <div class="author__image">
                           <img
-                            src="src/img/offers/verify.svg"
-                            alt="Icon: Verify"
-                            class="verify__img"
+                            src="src/img/offers/author.png"
+                            alt="Avatar: Author"
+                            class="author__avatar"
                           />
-                          <span class="verify__text verify__text--examples"
-                            >Verified writer</span
-                          >
                         </div>
-                        <!-- /.author__verify -->
+                        <!-- /.author__image -->
+                        <div class="author__info">
+                          <span class="author__name">Tony Hawk</span>
+                          <div class="verify">
+                            <img
+                              src="src/img/offers/verify.svg"
+                              alt="Icon: Verify"
+                              class="verify__img"
+                            />
+                            <span class="verify__text verify__text--examples"
+                              >Verified writer</span
+                            >
+                          </div>
+                          <!-- /.author__verify -->
+                        </div>
                       </div>
+                      <!-- /.author__profile -->
+                      <span class="author__date">02 May</span>
                     </div>
-                    <!-- /.author__profile -->
-                    <span class="author__date">02 May</span>
+                    <!-- /.author -->
                   </div>
-                  <!-- /.author -->
+                  <!-- /.offers__wrapper -->
                 </div>
-                <!-- /.offers__wrapper -->
-              </div>
-              <!-- /.offers__grid -->
-              <div class="offers offers-grid swiper-slide">
-                <img
-                  src="src/img/examples/slider-2.jpg"
-                  alt="Image: offers"
-                  class="offers__img"
-                />
-                <div class="offers__wrapper">
-                  <span class="offers__text examples__text">Предложения</span>
-                  <h2 class="offers__title">
-                    Дешевые Авиабилеты - Отличный Способ Сэкономить
-                  </h2>
-                  <p class="offers__info">
-                    В этом цифровом поколении, где информацию можно легко
-                    получить за секунды, визитки ...
-                  </p>
-                  <div class="author">
-                    <div class="author__profile">
-                      <div class="author__image">
-                        <img
-                          src="src/img/examples/avatar-1.png"
-                          alt="Avatar: Author"
-                          class="author__avatar"
-                        />
-                      </div>
-                      <!-- /.author__image -->
-                      <div class="author__info">
-                        <span class="author__name">Viola Manisa</span>
-                        <div class="verify">
+                <!-- /.offers__grid -->
+              </a>
+              <a class="swiper-slide" href="details.html" target="_blank">
+                <div class="offers offers-grid">
+                  <img
+                    src="src/img/examples/slider-2.jpg"
+                    alt="Image: offers"
+                    class="offers__img"
+                  />
+                  <div class="offers__wrapper">
+                    <span class="offers__text examples__text">Предложения</span>
+                    <h2 class="offers__title">
+                      Дешевые Авиабилеты - Отличный Способ Сэкономить
+                    </h2>
+                    <p class="offers__info">
+                      В этом цифровом поколении, где информацию можно легко
+                      получить за секунды, визитки ...
+                    </p>
+                    <div class="author">
+                      <div class="author__profile">
+                        <div class="author__image">
                           <img
-                            src="src/img/offers/verify.svg"
-                            alt="Icon: Verify"
-                            class="verify__img"
+                            src="src/img/examples/avatar-1.png"
+                            alt="Avatar: Author"
+                            class="author__avatar"
                           />
-                          <span class="verify__text verify__text--examples"
-                            >Verified writer</span
-                          >
                         </div>
-                        <!-- /.author__verify -->
+                        <!-- /.author__image -->
+                        <div class="author__info">
+                          <span class="author__name">Viola Manisa</span>
+                          <div class="verify">
+                            <img
+                              src="src/img/offers/verify.svg"
+                              alt="Icon: Verify"
+                              class="verify__img"
+                            />
+                            <span class="verify__text verify__text--examples"
+                              >Verified writer</span
+                            >
+                          </div>
+                          <!-- /.author__verify -->
+                        </div>
                       </div>
+                      <!-- /.author__profile -->
+                      <span class="author__date">02 May</span>
                     </div>
-                    <!-- /.author__profile -->
-                    <span class="author__date">02 May</span>
+                    <!-- /.author -->
                   </div>
-                  <!-- /.author -->
+                  <!-- /.offers__wrapper -->
                 </div>
-                <!-- /.offers__wrapper -->
-              </div>
-              <!-- /.offers__grid -->
-              <div class="offers offers-grid swiper-slide">
-                <img
-                  src="src/img/examples/slider-3.jpg"
-                  alt="Image: offers"
-                  class="offers__img"
-                />
-                <div class="offers__wrapper">
-                  <span class="offers__text examples__text">Предложения</span>
-                  <h2 class="offers__title">
-                    Дешевые Авиабилеты - Отличный Способ Сэкономить
-                  </h2>
-                  <p class="offers__info">
-                    В этом цифровом поколении, где информацию можно легко
-                    получить за секунды, визитки ...
-                  </p>
-                  <div class="author">
-                    <div class="author__profile">
-                      <div class="author__image">
-                        <img
-                          src="src/img/examples/avatar-2.png"
-                          alt="Avatar: Author"
-                          class="author__avatar"
-                        />
-                      </div>
-                      <!-- /.author__image -->
-                      <div class="author__info">
-                        <span class="author__name">Jack Black</span>
-                        <div class="verify">
+                <!-- /.offers__grid -->
+              </a>
+              <a class="swiper-slide" href="details.html" target="_blank">
+                <div class="offers offers-grid">
+                  <img
+                    src="src/img/examples/slider-3.jpg"
+                    alt="Image: offers"
+                    class="offers__img"
+                  />
+                  <div class="offers__wrapper">
+                    <span class="offers__text examples__text">Предложения</span>
+                    <h2 class="offers__title">
+                      Дешевые Авиабилеты - Отличный Способ Сэкономить
+                    </h2>
+                    <p class="offers__info">
+                      В этом цифровом поколении, где информацию можно легко
+                      получить за секунды, визитки ...
+                    </p>
+                    <div class="author">
+                      <div class="author__profile">
+                        <div class="author__image">
                           <img
-                            src="src/img/offers/verify.svg"
-                            alt="Icon: Verify"
-                            class="verify__img"
+                            src="src/img/examples/avatar-2.png"
+                            alt="Avatar: Author"
+                            class="author__avatar"
                           />
-                          <span class="verify__text verify__text--examples"
-                            >Verified writer</span
-                          >
                         </div>
-                        <!-- /.author__verify -->
+                        <!-- /.author__image -->
+                        <div class="author__info">
+                          <span class="author__name">Jack Black</span>
+                          <div class="verify">
+                            <img
+                              src="src/img/offers/verify.svg"
+                              alt="Icon: Verify"
+                              class="verify__img"
+                            />
+                            <span class="verify__text verify__text--examples"
+                              >Verified writer</span
+                            >
+                          </div>
+                          <!-- /.author__verify -->
+                        </div>
                       </div>
+                      <!-- /.author__profile -->
+                      <span class="author__date">02 May</span>
                     </div>
-                    <!-- /.author__profile -->
-                    <span class="author__date">02 May</span>
+                    <!-- /.author -->
                   </div>
-                  <!-- /.author -->
+                  <!-- /.offers__wrapper -->
                 </div>
-                <!-- /.offers__wrapper -->
-              </div>
-              <!-- /.offers__grid -->
+                <!-- /.offers__grid --></a
+              >
             </div>
           </div>
           <button class="examples-grid__button examples-grid__button--prev">
@@ -719,7 +741,7 @@
               <div class="author__profile">
                 <div class="author__image">
                   <img
-                    src="src/img/all-articles/author.png"
+                    src="src/img/all-articles/author.jpg"
                     alt="Avatar: Author"
                     class="author__avatar"
                   />
@@ -761,7 +783,7 @@
               <div class="author__profile">
                 <div class="author__image">
                   <img
-                    src="src/img/all-articles/author-1.png"
+                    src="src/img/all-articles/author-1.jpg"
                     alt="Avatar: Author"
                     class="author__avatar"
                   />
@@ -804,7 +826,7 @@
               <div class="author__profile">
                 <div class="author__image">
                   <img
-                    src="src/img/all-articles/author-2.png"
+                    src="src/img/all-articles/author-2.jpg"
                     alt="Avatar: Author"
                     class="author__avatar"
                   />
@@ -852,7 +874,7 @@
               <div class="author__profile">
                 <div class="author__image">
                   <img
-                    src="src/img/all-articles/author-3.png"
+                    src="src/img/all-articles/author-3.jpg"
                     alt="Avatar: Author"
                     class="author__avatar"
                   />
@@ -902,7 +924,7 @@
               <div class="author__profile">
                 <div class="author__image">
                   <img
-                    src="src/img/all-articles/author-4.png"
+                    src="src/img/all-articles/author-4.jpg"
                     alt="Avatar: Author"
                     class="author__avatar"
                   />
@@ -948,7 +970,7 @@
               <div class="author__profile">
                 <div class="author__image">
                   <img
-                    src="src/img/all-articles/author-4.png"
+                    src="src/img/all-articles/author-4.jpg"
                     alt="Avatar: Author"
                     class="author__avatar"
                   />
@@ -1001,13 +1023,21 @@
             <h2 class="footer-form__title">
               Получите наши истории на ваш почтовый ящик еженедельно.
             </h2>
-            <form action="send.php" method="post" class="footer-form__form">
-              <input
-                name="email"
-                type="email"
-                class="footer-form__input"
-                placeholder="Ваш Email"
-              />
+            <form
+              action="send.php"
+              method="post"
+              class="send-form footer-form__form"
+            >
+              <div class="footer__input-group">
+                <input
+                  name="email"
+                  type="email"
+                  class="footer-form__input"
+                  placeholder="Ваш Email"
+                  required
+                />
+              </div>
+              <!-- /.footer__input-group -->
               <button class="footer-form__button">Начать</button>
             </form>
             <p class="footer-form__info">
@@ -1118,9 +1148,7 @@
               <li
                 class="footer-grid__item footer-grid__item--less"
                 id="grid-item"
-              >
-                <a href="#">Политика конфиденциальности</a>
-              </li>
+              ></li>
               <li class="footer-grid__item"><a href="#">Careers</a></li>
             </ul>
           </div>
@@ -1164,26 +1192,43 @@
         />
         <h3 class="modal__title">Подписаться на рассылку</h3>
         <p class="modal__text">Напишите свои данные для получения рассылки!</p>
-        <form action="send.php" method="post" class="modal__form">
-          <input
-            name="email"
-            type="email"
-            class="modal__input"
-            placeholder="E-mail*"
-          />
-          <input
-            name="name"
-            type="text"
-            class="modal__input"
-            placeholder="ФИО*"
-          />
+        <form action="send.php" method="post" class="send-form modal__form">
+          <div class="modal__input-group">
+            <input
+              name="name"
+              type="text"
+              class="modal__input"
+              placeholder="ФИО*"
+              required
+            />
+          </div>
+          <!-- /.modal__input-group -->
+          <div class="modal__input-group">
+            <input
+              name="email"
+              type="email"
+              class="modal__input"
+              placeholder="E-mail*"
+              required
+            />
+          </div>
+          <!-- /.modal__input-group -->
+          <div class="modal__input-group">
+            <input
+              name="phone"
+              type="tel"
+              class="phone modal__input"
+              placeholder="Номер телефона*"
+              required
+            />
+          </div>
+          <!-- /.modal__input-group -->
           <button class="modal__button">Отправить</button>
         </form>
       </div>
     </div>
-    <script src="src/js/jquery-3.6.0.min.js"></script>
-    <script src="src/js/swiper-bundle.min.js"></script>
-    <script src="src/js/aos.js"></script>
-    <script src="src/js/main.js"></script>
+    <div class="toTop">
+      <img src="src/img/toTop.svg" alt="Icon: to Top" class="toTop__img" />
+    </div>
   </body>
 </html>
