@@ -1,0 +1,205 @@
+.footer
+  position: relative
+  &__bg
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    z-index: -5
+    min-height: 1307px
+    max-height: 1307px
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-bottom: 220px
+  &-form
+    width: 55%
+    padding-bottom: 6px
+    &--details
+      padding-bottom: 0
+    &__title
+      font-family: Roboto
+      font-style: normal
+      font-weight: bold
+      font-size: 36px
+      line-height: 48px
+      letter-spacing: 0.2px
+      margin: 0
+      margin-bottom: 46px
+    &__form
+      display: flex
+      justify-content: space-between
+      width: 494px
+      margin-bottom: 24px
+    &__input
+      width: 320px
+      height: 56px
+      border-radius: 8px
+      overflow: hidden
+      outline: none
+      padding-left: 16px
+      font-size: 16px
+      line-height: 22px
+      color: $text
+      border: none
+    &__button
+      padding: 16px 49px
+      border: none
+      text-align: center
+      overflow: hidden
+      outline: none
+      border-radius: 8px
+      background: $buttons
+      color: $primary
+      font-weight: bold
+      font-size: 18px
+      line-height: 25px
+      text-align: center
+    &__info
+      font-size: 16px
+      line-height: 28px
+      color: $text
+      width: 88%
+  &__input
+    &-group
+      position: relative
+      width: 65%
+  & label
+    font-size: 14px
+  &-card
+    padding-top: 10px
+    padding-bottom: 32px
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    margin-right: -30px
+    position: relative
+    &::before
+      position: absolute
+      content: ''
+      top: 52px
+      right: -51px
+      width: 237px
+      height: 200px
+      background-image: url(../img/footer/left-square.svg)
+      z-index: -1
+    &::after
+      position: absolute
+      content: ''
+      bottom: -10px
+      left: -61px
+      width: 237px
+      height: 200px
+      background: #FFFFFF
+      mix-blend-mode: normal
+      opacity: 0.06
+      border-radius: 16px
+      z-index: -1
+    &__wrapper
+      background: $primary
+      width: 466px
+      min-height: 385px
+      border-radius: 16px
+      padding: 8px 7px 0px 9px
+      z-index: -1
+      background-size: 100%
+    &__img
+      width: 100%
+      height: 212px
+      border-radius: 12px
+    &__info
+      padding: 25px 56px 32px 24px
+    &__title
+      margin: 0
+      font-family: Roboto
+      font-style: normal
+      font-weight: bold
+      font-size: 24px
+      line-height: 32px
+      letter-spacing: 0.2px
+      color: $secondary
+      margin-bottom: 12px
+    &__text
+      margin: 0
+      font-size: 18px
+      line-height: 32px
+      color: $text
+  &-grid
+    display: grid
+    grid-template: 1fr / repeat(5, 1fr)
+    margin-left: -15px
+    max-width: 1045px
+    padding-top: 6px
+    padding-bottom: 79px
+    &__ul
+      list-style-type: none
+      padding: 0
+      margin: 0
+    &__title
+      margin: 0
+      font-weight: bold
+      font-size: 18px
+      line-height: 25px
+      color: $text
+      margin-bottom: 31px
+    &__item
+      color: #959EAD
+      font-size: 16px
+      line-height: 22px
+      margin-bottom: 24px
+      &--less
+        margin-bottom: 11px
+    &__logo
+      padding: 0
+    &__icon
+      margin-top: 4px
+    &__text
+      margin-top: 25px
+      margin-bottom: 32px
+      font-size: 15px
+      line-height: 28px
+      color: $text
+      width: 243px
+    &__links
+      display: flex
+      width: 74%
+      justify-content: space-between
+    &__product
+      justify-self: center
+      padding-top: 4px
+      margin-right: -12px
+    &__service
+      padding-left: 44px
+      padding-top: 4px
+    &__company
+      padding-top: 4px
+      padding-left: 38px
+      max-width: 200px
+    &__more
+      justify-self: center
+      padding-top: 4px
+      padding-right: 23px
+  &-copyright
+    display: flex
+    justify-content: center
+    flex-direction: column
+    align-items: center
+    padding-right: 28px
+    padding-bottom: 65px
+    &__logo
+      width: 56px
+      height: 56px
+      background: $buttons
+      border-radius: 50%
+      display: flex
+      justify-content: center
+      align-items: center
+      margin-top: -8px
+      margin-bottom: 8px
+    &__info
+      font-weight: 600
+      font-size: 16px
+      line-height: 22px
+      text-align: center
+      color: $text

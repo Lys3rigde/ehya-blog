@@ -1,0 +1,234 @@
+.header
+  overflow: hidden
+  &__bg
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    min-height: 743px
+    max-height: 743px
+    z-index: -1
+    object-fit: cover
+    object-position: 65% 90%
+    &--details
+      min-height: 642px
+      max-height: 642px
+  &__wrapper
+    display: flex
+    padding: 26px 0
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 120px
+    &--details
+      margin-bottom: 88px
+  &-button
+    display: none
+  &__title
+    padding: 19px 172px 260px 261px
+    font-family: Roboto
+    font-style: normal
+    font-weight: bold
+    font-size: 48px
+    line-height: 72px
+    text-align: center
+    letter-spacing: 0.2px
+.logo
+  padding-top: 7px
+.navbar
+  display: flex
+  justify-content: space-between
+  width: 594px
+  &-mobile
+    display: none
+    position: fixed
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    background: #1A3245
+    width: 100%
+    z-index: 200
+    padding-top: 55px
+    &__list
+      display: flex
+      align-items: center
+      flex-wrap: wrap
+      width: 100%
+      height: 100%
+      padding: 0
+      margin: 0
+    &__item
+      width: 45%
+  &-grid
+    display: flex
+    width: 100%
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    min-height: 500px
+    height: 100%
+    overflow-y: scroll
+  &__list
+    list-style-type: none
+    display: flex
+    justify-content: space-between
+    padding: 13px 0
+    margin: 0
+    width: 381px
+  &__item
+    display: flex
+    align-items: center
+    font-weight: 600
+    font-size: 16px
+    line-height: 22px
+    &--menu
+      position: relative
+      &:hover
+        .submenu
+          opacity: 1
+          transform: scaleY(1)
+    &--second
+      position: relative
+      &:hover
+        .submenu
+          &-second
+            opacity: 1
+            transform: scaleY(1)
+  &__link
+    text-decoration: none
+    color: $primary
+    padding-right: 2px
+    &--left
+      margin-left: 11px
+      position: relative
+  &__button
+    margin-left: 82px
+    background: none
+    border: 2px solid #FFFFFF
+    border-radius: 8px
+    color: inherit
+    padding: 11.5px 22px
+    outline: none
+    cursor: pointer
+    font-weight: bold
+    font-size: 16px
+    line-height: 22px
+.search
+  padding: 0 190px
+  &__wrapper
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    flex-wrap: wrap
+  &__title
+    font-family: Roboto
+    font-style: normal
+    font-weight: bold
+    font-size: 48px
+    line-height: 60px
+    text-align: center
+    margin-top: 0
+    margin-bottom: 40px
+  &__list
+    list-style-type: none
+    display: flex
+    padding: 0
+    margin: 0
+  &__tags
+    margin-right: 13px
+    font-weight: 600
+    font-size: 16px
+    line-height: 22px
+  &__item
+    margin-right: 20px
+  &__button
+    padding: 5px 17.4px
+    background: none
+    border: 1px solid #FFFFFF
+    border-radius: 4px
+    color: inherit
+    font-weight: normal
+    font-size: 14px
+    line-height: 20px
+.form
+  position: relative
+  margin-bottom: 24px
+  width: 760px
+  &__input
+    width: 100%
+    height: 56px
+    padding-left: 52px
+    padding-right: 90px
+    border: none
+    border-radius: 8px
+    overflow: hidden
+    outline: none
+    font-weight: 600
+    font-size: 16px
+    line-height: 22px
+  &__img
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    left: 20px
+    height: 18px
+  &__button
+    position: absolute
+    top: 50%
+    right: 8px
+    transform: translateY(-50%)
+    padding: 9px 21px
+    background: $buttons
+    border: none
+    border-radius: 8px
+    font-weight: bold
+    font-size: 16px
+    line-height: 22px
+    color: inherit
+    overflow: hidden
+    outline: none
+.submenu
+  color: inherit
+  position: absolute
+  left: 0
+  top: 100%
+  z-index: 5
+  width: 180px
+  opacity: 0
+  transform: scaleY(0)
+  transform-origin: 0 0
+  transition: 0.4s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+  height: 100%
+  list-style-type: none
+  margin: 0
+  margin-top: 10px
+  padding-left: 10px
+  z-index: 200
+  &--mobile
+    display: flex
+    flex-direction: column
+    width: 100%
+    align-items: center
+    padding: 0
+  &-second
+    color: inherit
+    position: absolute
+    left: 0
+    top: 100%
+    z-index: 5
+    width: 180px
+    opacity: 0
+    transform: scaleY(0)
+    transform-origin: 0 0
+    transition: 0.4s cubic-bezier(0.3, 0.04, 0.675, 0.19)
+    height: 100%
+    list-style-type: none
+    margin: 0
+    padding-left: 0
+    z-index: 200
+    &--mobile
+      display: flex
+      flex-direction: column
+      width: 100%
+      align-items: center
+      padding: 0

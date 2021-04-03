@@ -1,0 +1,355 @@
+.article
+  &__wrapper
+    position: relative
+    display: flex
+    justify-content: center
+    max-width: 750px
+    margin: auto
+    flex-direction: column
+    align-items: center
+    padding-left: 10px
+  &__prologue
+    font-size: 20px
+    line-height: 32px
+    color: $text
+    width: 100%
+    margin-bottom: 17px
+  &__button
+    position: absolute
+    top: 37%
+    transform: translateY(-50%)
+    z-index: 100
+    width: 54px
+    height: 56px
+    border-radius: 50%
+    background-color: $buttons
+    outline: none
+    border: none
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    &--prev
+      left: 0
+      transform: translateX(-48.4%)
+    &--next
+      right: 0
+      transform: translateX(48.4%)
+  &__slider
+    &-wrapper
+      position: relative
+      margin-left: 10px
+      display: flex
+      justify-content: center
+      flex-direction: column
+    &-info
+      font-size: 14px
+      line-height: 20px
+      color: $text
+      text-align: center
+      margin-top: 14px
+      padding-left: 2px
+      margin-bottom: 20px
+  &-preview
+    &__img
+      border-radius: 16px
+      width: 750px
+      height: 360px
+      object-fit: cover
+      margin-left: 9px
+      margin-bottom: 10px
+    &__info
+      display: flex
+      justify-content: center
+      font-size: 14px
+      line-height: 20px
+      text-align: center
+      color: $text
+      padding-left: 13px
+  &-text
+    padding-bottom: 87px
+    &--pb
+      padding-bottom: 19px
+    &--small
+      padding-top: 114px
+      padding-bottom: 20px
+    &__title
+      font-family: Roboto
+      font-style: normal
+      font-weight: bold
+      font-size: 36px
+      line-height: 48px
+      letter-spacing: 0.2px
+      color: $secondary
+      margin: 20px -10px 0 1px
+      &--mb
+        margin-top: -1px
+    &__subtitle
+      font-family: Roboto
+      font-style: normal
+      font-weight: bold
+      font-size: 24px
+      line-height: 32px
+      letter-spacing: 0.2px
+      color: $secondary
+      margin: 0
+      margin-bottom: 4.5px
+      &--mb
+        margin-bottom: 16px
+      &--mblh
+        margin-bottom: 11px
+    &__text
+      font-size: 16px
+      line-height: 26px
+      color: $text
+      margin: 0
+      margin-right: -10px
+      margin-bottom: 16px
+      &--mb
+        margin-bottom: 9px
+      &--lh
+        line-height: 28px
+        margin-right: -9px
+  &-slider
+    width: 750px
+    height: 360px
+    border-radius: 16px
+    &__img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      border-radius: 16px
+  &-quote
+    position: relative
+    display: flex
+    justify-content: space-between
+    flex-direction: column
+    width: 750px
+    padding: 58px 63px 75px 58px
+    min-height: 570px
+    background-image: url(../img/article/quote-bg.png)
+    background-repeat: no-repeat
+    background-size: cover
+    margin-right: -13px
+    border-radius: 16px
+    &__text
+      font-family: Roboto
+      font-style: normal
+      font-weight: bold
+      font-size: 36px
+      line-height: 60px
+      letter-spacing: 0.09px
+      text-align: center
+      color: #FFFFFF
+      margin-top: 20px
+      margin-bottom: 14px
+    &__info
+      font-family: Open Sans
+      font-style: normal
+      font-weight: normal
+      font-size: 18px
+      line-height: 25px
+      text-align: center
+    &__avatar
+      position: absolute
+      bottom: 0
+      left: 50%
+      transform: translate(-50%, 48.2%)
+      border-radius: 8px
+      width: 121px
+      height: 120px
+      object-fit: cover
+    &__icon
+      height: 46px
+  &-grid
+    display: grid
+    grid-template: 1fr 1fr / 1fr 1fr
+    grid-template-areas: "first second" "first third"
+    row-gap: 30px
+    column-gap: 30px
+    padding-bottom: 12px
+    margin-right: -10px
+    &__img
+      grid-area: first
+      width: 100%
+      height: 100%
+      object-fit: cover
+      border-radius: 16px
+      &--second
+        grid-area: second
+        height: 225px
+      &--third
+        grid-area: third
+        height: 225px
+  &__info
+    font-family: Open Sans
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 20px
+    color: $text
+    text-align: center
+    margin-right: -10px
+    margin-bottom: 48px
+  &-comments
+    padding-bottom: 263px
+    display: flex
+    flex-direction: column
+    align-items: stretch
+    justify-content: space-between
+    width: 100%
+    &__title
+      font-family: Roboto
+      font-style: normal
+      font-weight: bold
+      font-size: 36px
+      line-height: 48px
+      color: $secondary
+      letter-spacing: 0.2px
+      margin-top: 0
+      margin-bottom: 9px
+    &__comment
+      display: flex
+      justify-content: space-between
+      align-items: baseline
+      margin-right: -10px
+      &--mb
+        margin-bottom: 23px
+    &__profile
+      display: flex
+      justify-content: space-between
+      align-items: center
+    &__avatar
+      width: 40px
+      height: 40px
+      object-fit: cover
+      border-radius: 50%
+      margin-right: 12px
+      &--form
+        position: absolute
+        top: 12px
+        left: 16px
+    &__user
+      display: flex
+      flex-direction: column
+    &__name
+      font-family: Open Sans
+      font-style: normal
+      font-weight: 600
+      font-size: 16px
+      line-height: 22px
+      color: $secondary
+    &__date
+      font-family: Open Sans
+      font-style: normal
+      font-weight: 600
+      font-size: 14px
+      line-height: 20px
+      color: $text
+    &__text
+      background: #B3BAC5
+      max-width: 555px
+      padding: 20px
+      font-size: 16px
+      line-height: 28px
+      color: $text
+      border-radius: 0 16px 16px 16px
+      margin-bottom: 8px
+    &__form
+      position: relative
+      width: 750px
+    &__input
+      width: 100%
+      min-height: 64px
+      padding: 12px 180px 12px 72px
+      border: 1px solid #E5EAF4
+      border-radius: 8px
+      font-size: 16px
+      line-height: 22px
+      color: #959EAD
+    &__button
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      right: 12px
+      padding: 9px 4.5px
+      background: $buttons
+      border: none
+      overflow: hidden
+      outline: none
+      font-weight: bold
+      font-size: 16px
+      line-height: 22px
+      text-align: center
+      color: $primary
+      border-radius: 8px
+  &__br
+    display: none
+  &-share
+    display: none
+    &--active
+      display: flex
+      flex-direction: column
+      position: fixed
+      top: 42px
+      left: 151px
+    &-wrapper
+    &__text
+      font-weight: 600
+      font-size: 16px
+      line-height: 22px
+      color: $text
+      text-align: center
+      margin-bottom: 36px
+    &__icon
+      margin-bottom: 32.4px
+.author
+  &--article
+    margin-bottom: 40px
+  &--bottom
+    padding: 21px 0
+    border-top: 1px solid #E5EAF4
+    border-bottom: 1px solid #E5EAF4
+    height: auto
+    margin-bottom: 65px
+  &__date
+    &--details
+      font-weight: 600
+      font-size: 14px
+      line-height: 20px
+      text-align: right
+      margin-right: -11px
+.footer
+  &__bg
+    &--details
+      min-height: 1366px
+      max-height: 1366px
+  &__wrapper
+    &--details
+      padding-left: 8px
+      padding-bottom: 218px
+  &-card
+    &--details
+      margin-right: -40px
+  &-grid
+    &--details
+      padding-left: 66px
+      padding-top: 0
+    &__product
+      &--details
+        margin-right: -35px
+    &__service
+      &--details
+        padding-left: 67px
+    &__company
+      &--details
+        padding-left: 82px
+    &__more
+      &--details
+        padding-right: 0px
+        margin-right: -89px
+  &-copyright
+    &--details
+      padding-right: 0
+      padding-left: 103px
+      padding-bottom: 64px
